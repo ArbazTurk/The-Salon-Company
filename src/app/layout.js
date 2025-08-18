@@ -4,30 +4,79 @@ import "./globals.css"; // Re-enable this for base styles
 
 export default function RootLayout({ children }) {
   // This useEffect will run only on the client, after the component has mounted
+
   useEffect(() => {
-    // This function will dynamically load the scripts
-    const loadScript = (src) => {
-      // Avoid adding duplicate scripts
-      if (document.querySelector(`script[src="${src}"]`)) return;
+    // Ye function ek script load karega, aur jab wo load ho jayegi, to callback function chalayega
+    const loadScript = (src, callback) => {
+      // Check karo ki script pehle se to nahi hai
+      if (document.querySelector(`script[src="${src}"]`)) {
+        if (callback) callback();
+        return;
+      }
       
       const script = document.createElement('script');
       script.src = src;
-      script.async = false; // Load in order
+      
+      // Ye function tab chalega jab script poori tarah load ho chuki hogi
+      script.onload = () => {
+        if (callback) callback();
+      };
+      
+      // Error handling ke liye
+      script.onerror = () => {
+        console.error(`Error loading script: ${src}`);
+      };
+
       document.body.appendChild(script);
     };
 
-    // Load your scripts in the desired order
-    loadScript('/js/plugins.js');
-    loadScript('/js/designesia.js');
-    loadScript('/js/custom-marquee.js');
-    loadScript('/js/swiper.js');
+    // Scripts ko ek chain mein load karna. Isse guarantee hai ki order sahi rahega.
+    loadScript('/js/plugins.js', () => {
+      // Ye console log tabhi aayega jab plugins.js 100% load ho chuki hogi
+      console.log("SUCCESS: jQuery and plugins.js loaded.");
+      
+      // Ab designesia.js ko load karo
+      loadScript('/js/designesia.js', () => {
+        console.log("SUCCESS: designesia.js loaded.");
+        
+        // Ab marquee script load karo
+        loadScript('/js/custom-marquee.js', () => {
+          console.log("SUCCESS: custom-marquee.js loaded.");
+          
+          // Ab swiper.js ko load karo
+          loadScript('/js/swiper.js', () => {
+            console.log("SUCCESS: swiper.js loaded.");
+        });
+      });
+    });
 
-    // It's good practice to clean up the scripts when the component unmounts
-    return () => {
-      const scripts = document.querySelectorAll('script[src^="/js/"]');
-      scripts.forEach(script => script.remove());
-    };
-  }, []); // The empty array ensures this effect runs only once
+  })}, []); // [] ka matlab hai ki ye effect sirf ek baar chalega
+
+
+  // useEffect(() => {
+  //   // This function will dynamically load the scripts
+  //   const loadScript = (src) => {
+  //     // Avoid adding duplicate scripts
+  //     if (document.querySelector(`script[src="${src}"]`)) return;
+      
+  //     const script = document.createElement('script');
+  //     script.src = src;
+  //     script.async = false; // Load in order
+  //     document.body.appendChild(script);
+  //   };
+
+  //   // Load your scripts in the desired order
+  //   loadScript('/js/plugins.js');
+  //   loadScript('/js/designesia.js');
+  //   loadScript('/js/custom-marquee.js');
+  //   loadScript('/js/swiper.js');
+
+  //   // It's good practice to clean up the scripts when the component unmounts
+  //   return () => {
+  //     const scripts = document.querySelectorAll('script[src^="/js/"]');
+  //     scripts.forEach(script => script.remove());
+  //   };
+  // }, []); // The empty array ensures this effect runs only once
 
   return (
     <html lang="en">

@@ -44,46 +44,91 @@ export default function Accommodations() {
 
   // Component render hone ke baad ye effect chalega
   useEffect(() => {
-    // Check karna ki jQuery aur Owl Carousel loaded hain ya nahi
-    if (typeof window !== 'undefined' && window.jQuery && window.jQuery.fn.owlCarousel) {
-      const $ = window.jQuery;
-      
-      const owl = $(carouselRef.current);
-      console.log('loaded');
 
-      // Owl Carousel ko initialize karna
-      owl.owlCarousel({
-        center: false,
-        items: 1, // Mobile par default 1 item
-        loop: true,
-        margin: 30,
-        nav: false, // Original navigation buttons hide kar rahe hain
-        dots: false, // Original dots hide kar rahe hain
-        responsive:{
-            1000:{ items:3 }, // Desktop par 3 items
-            600:{ items:2 },  // Tablet par 2 items
-            0:{ items:1 }     // Mobile par 1 item
+    const timer = setTimeout(() => {
+      if (typeof window !== 'undefined' && window.jQuery && window.jQuery.fn.owlCarousel) {
+        const $ = window.jQuery;
+        const owl = $(carouselRef.current);
+        
+        // YE CONSOLE LOG AB 100% AAYEGA
+        console.log('SUCCESS: Accommodations component found jQuery and Owl Carousel!');
+
+        // Check karo ki carousel pehle se initialized to nahi hai
+        if (owl.hasClass('owl-loaded')) {
+            return;
         }
-      });
-      
-      // Custom navigation buttons (jo bahar hain) ke liye click events add karna
-      $('.owl-custom-nav .btn-next').on('click', function () {
-        owl.trigger('next.owl.carousel');
-      });
 
-      $('.owl-custom-nav .btn-prev').on('click', function () {
-        owl.trigger('prev.owl.carousel');
-      });
+        owl.owlCarousel({
+          center: false, items: 1, loop: true, margin: 30, nav: false, dots: false,
+          responsive: { 1000: { items: 3 }, 600: { items: 2 }, 0: { items: 1 } }
+        });
+        
+        $('.owl-custom-nav .btn-next').on('click', function () {
+          owl.trigger('next.owl.carousel');
+        });
 
-      // Cleanup function: Jab component unmount ho, to events aur carousel ko destroy karna
-      return () => {
+        $('.owl-custom-nav .btn-prev').on('click', function () {
+          owl.trigger('prev.owl.carousel');
+        });
+      } else {
+        // Agar 100ms ke baad bhi na mile, to ye error aayegi
+        console.error("ERROR: jQuery or Owl Carousel not found after 100ms delay.");
+      }
+    }, 100); // 100 millisecond ka delay
+
+    // Cleanup function: Jab component unmount ho to timer aur events ko saaf karna
+    return () => {
+      clearTimeout(timer);
+      if (window.jQuery) {
         $('.owl-custom-nav .btn-next').off('click');
         $('.owl-custom-nav .btn-prev').off('click');
-        if(owl.data('owl.carousel')) { // Check karna ki carousel exist karta hai ya nahi
-            owl.trigger('destroy.owl.carousel');
+        const owl = window.jQuery(carouselRef.current);
+        if (owl.length > 0 && owl.data('owl.carousel')) {
+          owl.trigger('destroy.owl.carousel');
         }
-      };
-    }
+      }
+    };
+
+    // Check karna ki jQuery aur Owl Carousel loaded hain ya nahi
+    // if (typeof window !== 'undefined' && window.jQuery && window.jQuery.fn.owlCarousel) {
+    //   const $ = window.jQuery;
+      
+    //   const owl = $(carouselRef.current);
+    //   console.log('loaded');
+
+    //   // Owl Carousel ko initialize karna
+    //   owl.owlCarousel({
+    //     center: false,
+    //     items: 1, // Mobile par default 1 item
+    //     loop: true,
+    //     margin: 30,
+    //     nav: false, // Original navigation buttons hide kar rahe hain
+    //     dots: false, // Original dots hide kar rahe hain
+    //     responsive:{
+    //         1000:{ items:3 }, // Desktop par 3 items
+    //         600:{ items:2 },  // Tablet par 2 items
+    //         0:{ items:1 }     // Mobile par 1 item
+    //     }
+    //   });
+      
+    //   // Custom navigation buttons (jo bahar hain) ke liye click events add karna
+    //   $('.owl-custom-nav .btn-next').on('click', function () {
+    //     owl.trigger('next.owl.carousel');
+    //   });
+
+    //   $('.owl-custom-nav .btn-prev').on('click', function () {
+    //     owl.trigger('prev.owl.carousel');
+    //   });
+
+    //   // Cleanup function: Jab component unmount ho, to events aur carousel ko destroy karna
+    //   return () => {
+    //     $('.owl-custom-nav .btn-next').off('click');
+    //     $('.owl-custom-nav .btn-prev').off('click');
+    //     if(owl.data('owl.carousel')) { // Check karna ki carousel exist karta hai ya nahi
+    //         owl.trigger('destroy.owl.carousel');
+    //     }
+    //   };
+    // }
   }, []); // [] ka matlab hai ki ye effect sirf ek baar chalega
 
   return (
