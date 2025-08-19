@@ -354,7 +354,8 @@ header div#logo {
 }
 
 header div#logo img{
-  width: 100%;
+  height: 35px;
+  width: auto;
 }
 
 header .logo-2 {
@@ -13724,6 +13725,9 @@ p.slider-teaser{
   width: 100%;
   height: 100%;
   background: none;
+  background-size: cover;      /* Yeh line important hai */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Image repeat na ho */
 }
 
 .swiper-slide-active .subtitle {

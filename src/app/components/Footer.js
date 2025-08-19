@@ -10,13 +10,13 @@ export default function Footer() {
             <div className="d-lg-flex align-items-center justify-content-between text-center">
               <div>
                 <h3 className="fs-20">Address</h3>
-                742 Evergreen Terrace<br />
-                Brooklyn, NY 11201
+                GT-08, Sector 117, Noida<br />
+                (Near Spectrum Metro)
               </div>
               <div>
                 {/* Use Link component for the logo to navigate home */}
                 <Link href="/">
-                    <img src="/images/logo-white.webp" className="w-200px" alt="Almaris Hotel Logo" />
+                    <img src="/images/The_Salon_Company_Logo.png" className="w-300px" alt="The Salon Company Logo" />
                 </Link>
                 <br />
                 <div className="social-icons mb-sm-30 mt-4">
@@ -25,12 +25,13 @@ export default function Footer() {
                   <a href="#"><i className="fa-brands fa-instagram"></i></a>
                   <a href="#"><i className="fa-brands fa-twitter"></i></a>
                   <a href="#"><i className="fa-brands fa-youtube"></i></a>
+                  <a href="https://wa.me/918800026046"><i className="fa-brands fa-whatsapp"></i></a>
                 </div>
               </div>
               <div>
                 <h3 className="fs-20">Contact Us</h3>
-                T. +929 333 9296<br />
-                M. contact@almaris.com
+                T. +91 88000 26046<br />
+                M. www.lokaci.com
               </div>
             </div>
           </div>
@@ -40,7 +41,7 @@ export default function Footer() {
         <div className="container">
           <div className="row">
             <div className="col-md-12 text-center">
-              Copyright 2025 - Almaris by Designesia
+              Copyright 2025 - The Salon Company
             </div>
           </div>
         </div>

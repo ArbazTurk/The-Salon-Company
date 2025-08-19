@@ -20,7 +20,7 @@ export default function InstagramFeed() {
         <div className="row g-4">
           <div className="col-lg-8 offset-lg-2 mb-4 text-center">
             <div className="subtitle id-color wow fadeInUp mb-3">Our Instagram</div>
-            <h2 className="wow fadeInUp">@almaris_hotel_theme</h2>
+            <h2 className="wow fadeInUp">@the_salon_company</h2>
           </div>
         </div>
       </div>

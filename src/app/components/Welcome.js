@@ -9,7 +9,7 @@ export default function Welcome() {
             <div className="relative wow fadeInUp" data-wow-delay=".3s">
               <div className="abs top-0 w-100">
                 <div className="shape-mask-1 jarallax">
-                  <img src="/images/misc/2.webp" className="jarallax-img" alt="" />
+                  <img src="/images/misc/1.jpg" className="jarallax-img" alt="" />
                 </div>
               </div>
             </div>
@@ -17,8 +17,8 @@ export default function Welcome() {
 
           <div className="col-lg-4 text-center">
             <div className="wow scaleIn">
-              <div className="subtitle id-color mb-3">Welcome To Almaris</div>
-              <h2 className="wow fadeInUp">Exceptional Hospitality and Unmatched Relaxation at Almaris</h2>
+              <div className="subtitle id-color mb-3">Welcome To The Salon Company</div>
+              <h2 className="wow fadeInUp">Expert Artistry & Personalized Care</h2>
 
               <div className="text-center wow fadeInUp" data-wow-delay=".5s">
                 <h4 className="fw-bold mb-1">4.9 out of 5</h4>
@@ -31,6 +31,7 @@ export default function Welcome() {
                     <i className="icofont-star"></i>
                   </span>
                 </div>
+                {/* Based on hundreds of happy clients */}
                 <span className="d-block fs-14 mb-0">Based on 25000+ reviews</span>
               </div>
             </div>
@@ -40,7 +41,7 @@ export default function Welcome() {
             <div className="relative wow fadeInUp" data-wow-delay=".3s">
               <div className="abs top-0 w-100">
                 <div className="shape-mask-1 jarallax">
-                  <img src="/images/misc/3.webp" className="jarallax-img" alt="" />
+                  <img src="/images/misc/2.jpg" className="jarallax-img" alt="" />
                 </div>
               </div>
             </div>
@@ -53,11 +54,11 @@ export default function Welcome() {
           <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
             <div className="relative p-4 bg-white border-grey">
               <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
-                <img src="/images/svg/restaurant-svgrepo-com.svg" className="w-100" alt="" />
+                <img src="/images/icons/permanent makeup.png" className="w-100" alt="" />
               </span>
               <div className="pl-90">
-                <h4>Restaurant</h4>
-                <p className="mb-0">Do dolore laboris commodo amet cillum qui voluptate velit occaecat adipisicing laboris est minim.</p>
+                <h4>Permanent Makeup</h4>
+                <p className="mb-0">Achieve lasting beauty with our expert microblading, lip blushing, and eyeliner tattoo services.</p>
               </div>
             </div>
           </div>
@@ -65,11 +66,11 @@ export default function Welcome() {
           <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
             <div className="relative p-4 bg-white border-grey">
               <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
-                <img src="/images/svg/swimming-pool-svgrepo-com.svg" className="w-100" alt="" />
+                <img src="/images/icons/beauty treatment.png" className="w-100" alt="" />
               </span>
               <div className="pl-90">
-                <h4>Swimming Pool</h4>
-                <p className="mb-0">Do dolore laboris commodo amet cillum qui voluptate velit occaecat adipisicing laboris est minim.</p>
+                <h4>Beauty Treatments</h4>
+                <p className="mb-0">Rejuvenate your skin and spirit with our Luxury Facials, BB Glow, and Eyebrow Lamination.</p>
               </div>
             </div>
           </div>
@@ -77,11 +78,11 @@ export default function Welcome() {
           <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
             <div className="relative p-4 bg-white border-grey">
               <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
-                <img src="/images/svg/fitness-gym-svgrepo-com.svg" className="w-100" alt="" />
+                <img src="/images/icons/eyelash extensions.png" className="w-100" alt="" />
               </span>
               <div className="pl-90">
-                <h4>Fitness Center</h4>
-                <p className="mb-0">Do dolore laboris commodo amet cillum qui voluptate velit occaecat adipisicing laboris est minim.</p>
+                <h4>Eyelash Extensions</h4>
+                <p className="mb-0">Enhance your look with Classic, Hybrid, Volume, or Colorful lash extensions for stunning eyes.</p>
               </div>
             </div>
           </div>
@@ -93,7 +94,7 @@ export default function Welcome() {
               </span>
               <div className="pl-90">
                 <h4>Spa &amp; Massage</h4>
-                <p className="mb-0">Do dolore laboris commodo amet cillum qui voluptate velit occaecat adipisicing laboris est minim.</p>
+                <p className="mb-0">Relax and recharge with our calming massages and rejuvenating spa treatments.</p>
               </div>
             </div>
           </div>
@@ -101,11 +102,11 @@ export default function Welcome() {
           <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".7s" >
             <div className="relative p-4 bg-white border-grey">
               <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
-                <img src="/images/svg/meeting-explain-svgrepo-com.svg" className="w-100" alt="" />
+                <img src="/images/icons/hair artistry.png" className="w-100" alt="" />
               </span>
               <div className="pl-90">
-                <h4>Meeting Room</h4>
-                <p className="mb-0">Do dolore laboris commodo amet cillum qui voluptate velit occaecat adipisicing laboris est minim.</p>
+                <h4>Hair & Nail Artistry</h4>
+                <p className="mb-0">From chic hairstyles to intricate nail designs, our artists are here to perfect your style.</p>
               </div>
             </div>
           </div>
@@ -113,11 +114,11 @@ export default function Welcome() {
           <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".8s">
             <div className="relative p-4 bg-white border-grey">
               <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
-                <img src="/images/svg/laundry-machine-svgrepo-com.svg" className="w-100" alt="" />
+                <img src="/images/icons/premium products.png" className="w-100" alt="" />
               </span>
               <div className="pl-90">
-                <h4>Laundry Service</h4>
-                <p className="mb-0">Do dolore laboris commodo amet cillum qui voluptate velit occaecat adipisicing laboris est minim.</p>
+                <h4>Premium Products</h4>
+                <p className="mb-0">We use only the finest, industry-leading pigments and products for flawless, lasting results.</p>
               </div>
             </div>
           </div>

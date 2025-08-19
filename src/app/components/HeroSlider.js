@@ -54,10 +54,10 @@ export default function HeroSlider() {
                             <i className="icofont-star"></i>
                           </span>
                         </div>
-                        <h1 className="slider-title mb-4">Where Every Stay is Extraordinary</h1>
-                        <p className="col-lg-8 offset-lg-2 slider-teaser px-4 mb-0">Discover the perfect blend of luxury, comfort, and convenience at Almaris. Nestled in the heart of Brooklyn, our hotel is your gateway to an unforgettable experience.</p>
+                        <h1 className="slider-title mb-4">Where Artistry Meets Radiance</h1>
+                        <p className="col-lg-8 offset-lg-2 slider-teaser px-4 mb-0">Welcome to a sanctuary of beauty, where the art of permanent makeup and luxurious treatments transform and rejuvenate your natural glow.</p>
                         <div className="spacer-30"></div>
-                        <Link className="btn-main mb10 mb-3" href="/rooms">Discover Rooms</Link>
+                        <Link className="btn-main mb10 mb-3" href="/rooms">View Our Services</Link>
                       </div>
                     </div>
                     <div className="spacer-single"></div>
@@ -90,10 +90,10 @@ export default function HeroSlider() {
                             <i className="icofont-star"></i>
                           </span>
                         </div>
-                        <h1 className="slider-title mb-4">Experience Hospitality Like Never Before</h1>
-                        <p className="col-lg-8 offset-lg-2 slider-teaser px-4 mb-0">Discover the perfect blend of luxury, comfort, and convenience at Almaris. Nestled in the heart of Brooklyn, our hotel is your gateway to an unforgettable experience.</p>
+                        <h1 className="slider-title mb-4">Wake Up to Effortless Perfection</h1>
+                        <p className="col-lg-8 offset-lg-2 slider-teaser px-4 mb-0">Imagine perfectly sculpted brows, timeless eyeliner, and lips that exude confidence, all achieved with the finest pigments and techniques.</p>
                         <div className="spacer-30"></div>
-                        <Link className="btn-main mb10 mb-3" href="/rooms">Discover Rooms</Link>
+                        <Link className="btn-main mb10 mb-3" href="tel:8800026046">Free Consultation</Link>
                       </div>
                     </div>
                     <div className="spacer-single"></div>

@@ -9,35 +9,39 @@ export default function Accommodations() {
   // Data for the rooms to keep the JSX clean
   const roomsData = [
     {
-      imgSrc: "/images/room/1.webp",
+      imgSrc: "/images/services/lokaci services lip blusing 533x533.jpg",
       price: "129",
-      title: "Standard Room",
-      guests: 2,
-      size: 30,
+      title: "Lip Blushing",
       delay: ".3s"
     },
     {
-      imgSrc: "/images/room/2.webp",
+      imgSrc: "/images/services/lokaci services microblading 533x533.jpg",
       price: "129",
-      title: "Deluxe Room",
-      guests: 2,
-      size: 35,
+      title: "Microblading",
       delay: ".4s"
     },
     {
-      imgSrc: "/images/room/3.webp",
+      imgSrc: "/images/services/lokaci services eyeliner tattoo 533x533.jpg",
       price: "139",
-      title: "Premier Room",
-      guests: 2,
-      size: 35,
+      title: "Eyeliner Tattoo",
       delay: ".5s"
     },
     {
-      imgSrc: "/images/room/4.webp",
+      imgSrc: "/images/services/lokaci services luxury facial 533x533.jpg",
       price: "149",
-      title: "Family Suite",
-      guests: 4,
-      size: 60,
+      title: "Luxury Facial",
+      delay: ".7s"
+    },
+    {
+      imgSrc: "/images/services/lokaci services bb glow 533x533.jpeg",
+      price: "149",
+      title: "BB Glow",
+      delay: ".7s"
+    },
+    {
+      imgSrc: "/images/services/lokaci services eyelash extensions 533x533.jpeg",
+      price: "149",
+      title: "Eyelash Extensions",
       delay: ".7s"
     }
   ];
@@ -54,9 +58,9 @@ export default function Accommodations() {
         console.log('SUCCESS: Accommodations component found jQuery and Owl Carousel!');
 
         // Check karo ki carousel pehle se initialized to nahi hai
-        if (owl.hasClass('owl-loaded')) {
-            return;
-        }
+        // if (owl.hasClass('owl-loaded')) {
+        //     return;
+        // }
 
         owl.owlCarousel({
           center: false, items: 1, loop: true, margin: 30, nav: false, dots: false,
@@ -137,7 +141,7 @@ export default function Accommodations() {
         <div className="row g-4">
           <div className="col-lg-8 offset-lg-2 text-center">
             <div className="subtitle id-color wow fadeInUp mb-3">Elegant</div>
-            <h2 className="wow fadeInUp">Accomodation</h2>
+            <h2 className="wow fadeInUp">Services</h2>
           </div>
 
           <div className="col-lg-12">
@@ -162,10 +166,10 @@ export default function Accommodations() {
                         <h3 className="mb-0">{room.title}</h3>
                         <div className="text-center fs-14">
                           <span className="mx-2">
-                            {room.guests} Guests
+                            {room.guests}
                           </span>
                           <span className="mx-2">
-                            {room.size} ft
+                            {room.size}
                           </span>
                         </div>
                       </div>

@@ -11,9 +11,9 @@ export default function Header() {
                 {/* logo begin */}
                 <div id="logo">
                   <Link href="/">
-                    <img className="logo-main" src="/images/logo-white.webp" alt="" />
-                    <img className="logo-scroll" src="/images/logo-black.webp" alt="" />
-                    <img className="logo-mobile" src="/images/logo-white.webp" alt="" />
+                    <img className="logo-main" src="/images/The_Salon_Company_Logo_White.png" alt="" />
+                    <img className="logo-scroll" src="/images/The_Salon_Company_Logo.png" alt="" />
+                    <img className="logo-mobile" src="/images/The_Salon_Company_Logo.png" alt="" />
                   </Link>
                 </div>
                 {/* logo close */}

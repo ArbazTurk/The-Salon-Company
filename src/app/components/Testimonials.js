@@ -37,7 +37,7 @@ export default function Testimonials() {
       <div className="abs abs-centered w-30">
         <div className="box-slider-decor"></div>
       </div>
-      <img src="/images/background/1.webp" className="jarallax-img" alt="" />
+      <img src="/images/background/1.jpg" className="jarallax-img" alt="" />
       <div className="container">
         <div className="row">
           <div className="col-lg-8 offset-lg-2 text-center">
@@ -45,25 +45,25 @@ export default function Testimonials() {
             <div ref={carouselRef} className="owl-single-dots owl-carousel owl-theme">
               <div className="item">
                 <i className="icofont-quote-left id-color fs-40 mb-4 wow fadeInUp"></i>
-                <h3 className="mb-4 wow fadeInUp fs-36">Experience unparalleled luxury and personalized service at Almaris Hotel, where every stay is a journey into sophistication, comfort, and unforgettable memories.</h3>
+                <h3 className="mb-4 wow fadeInUp fs-36">Experience unparalleled beauty and personalized care at The Salon Company, where every visit is a journey into elegance, comfort, and unforgettable transformations.</h3>
                 <span className="wow fadeInUp">Donette Fondren</span>
               </div>
 
               <div className="item">
                 <i className="icofont-quote-left id-color fs-40 mb-4 wow fadeInUp"></i>
-                <h3 className="mb-4 wow fadeInUp fs-36">Experience unparalleled luxury and personalized service at Almaris Hotel, where every stay is a journey into sophistication, comfort, and unforgettable memories.</h3>
+                <h3 className="mb-4 wow fadeInUp fs-36">Experience unparalleled beauty and personalized care at The Salon Company, where every visit is a journey into elegance, comfort, and unforgettable transformations.</h3>
                 <span className="wow fadeInUp">Donette Fondren</span>
               </div>
 
               <div className="item">
                 <i className="icofont-quote-left id-color fs-40 mb-4 wow fadeInUp"></i>
-                <h3 className="mb-4 wow fadeInUp fs-36">Experience unparalleled luxury and personalized service at Almaris Hotel, where every stay is a journey into sophistication, comfort, and unforgettable memories.</h3>
+                <h3 className="mb-4 wow fadeInUp fs-36">Experience unparalleled beauty and personalized care at The Salon Company, where every visit is a journey into elegance, comfort, and unforgettable transformations.</h3>
                 <span className="wow fadeInUp">Donette Fondren</span>
               </div>
 
               <div className="item">
                 <i className="icofont-quote-left id-color fs-40 mb-4 wow fadeInUp"></i>
-                <h3 className="mb-4 wow fadeInUp fs-36">Experience unparalleled luxury and personalized service at Almaris Hotel, where every stay is a journey into sophistication, comfort, and unforgettable memories.</h3>
+                <h3 className="mb-4 wow fadeInUp fs-36">Experience unparalleled beauty and personalized care at The Salon Company, where every visit is a journey into elegance, comfort, and unforgettable transformations.</h3>
                 <span className="wow fadeInUp">Donette Fondren</span>
               </div>
             </div>
