@@ -1528,50 +1528,89 @@
 
          /* detepicker */
          
-         $('#date-picker').daterangepicker({
-                 "showISOWeekNumbers": true,
-                 "timePicker": false,
-                 "autoUpdateInput": true,
-                 "locale": {
-                     "format": "MMM DD",
-                     "separator": " - ",
-                     "applyLabel": "Apply",
-                     "cancelLabel": "Cancel",
-                     "fromLabel": "From",
-                     "toLabel": "To",
-                     "customRangeLabel": "Custom",
-                     "weekLabel": "W",
-                     "daysOfWeek": [
-                         "Su",
-                         "Mo",
-                         "Tu",
-                         "We",
-                         "Th",
-                         "Fr",
-                         "Sa"
-                     ],
-                     "monthNames": [
-                         "January",
-                         "February",
-                         "March",
-                         "April",
-                         "May",
-                         "June",
-                         "July",
-                         "August",
-                         "September",
-                         "October",
-                         "November",
-                         "December"
-                     ],
-                     "firstDay": 1
-                 },
-                 "linkedCalendars": true,
-                 "showCustomRangeLabel": false,
-                 "startDate": 1,
-                 "endDate": moment().startOf('hour').add(24, 'hour'),
-                 "opens": "right"
-             });
+        //  $('#date-picker').daterangepicker({
+        //          "showISOWeekNumbers": true,
+        //          "timePicker": false,
+        //          "autoUpdateInput": true,
+        //          "locale": {
+        //              "format": "MMM DD",
+        //              "separator": " - ",
+        //              "applyLabel": "Apply",
+        //              "cancelLabel": "Cancel",
+        //              "fromLabel": "From",
+        //              "toLabel": "To",
+        //              "customRangeLabel": "Custom",
+        //              "weekLabel": "W",
+        //              "daysOfWeek": [
+        //                  "Su",
+        //                  "Mo",
+        //                  "Tu",
+        //                  "We",
+        //                  "Th",
+        //                  "Fr",
+        //                  "Sa"
+        //              ],
+        //              "monthNames": [
+        //                  "January",
+        //                  "February",
+        //                  "March",
+        //                  "April",
+        //                  "May",
+        //                  "June",
+        //                  "July",
+        //                  "August",
+        //                  "September",
+        //                  "October",
+        //                  "November",
+        //                  "December"
+        //              ],
+        //              "firstDay": 1
+        //          },
+        //          "linkedCalendars": true,
+        //          "showCustomRangeLabel": false,
+        //          "startDate": 1,
+        //          "endDate": moment().startOf('hour').add(24, 'hour'),
+        //          "opens": "right"
+        //      });
+
+        // $('#date-picker').daterangepicker({
+        //     singleDatePicker: true,  
+        //     showISOWeekNumbers: true,
+        //     timePicker: false,
+        //     autoUpdateInput: true,
+        //     locale: {
+        //         format: 'MMM DD',
+        //         applyLabel: 'Apply',
+        //         cancelLabel: 'Cancel',
+        //         daysOfWeek: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+        //         monthNames: [
+        //             "January", "February", "March", "April", "May", "June",
+        //             "July", "August", "September", "October", "November", "December"
+        //         ],
+        //         firstDay: 1
+        //     },
+        //     startDate: moment() // Default selected date can be set here
+        // });
+
+        $('#date-picker').daterangepicker({
+            singleDatePicker: true,
+            timePicker: true,
+            showISOWeekNumbers: true,
+            autoUpdateInput: true,
+            locale: {
+                format: 'MMM DD, YYYY HH:mm',
+                applyLabel: 'Apply',
+                cancelLabel: 'Cancel',
+                daysOfWeek: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+                monthNames: [
+                "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+                ],
+                firstDay: 1
+            },
+            startDate: moment()
+            });
+
 
          /* de-number begin */
 
@@ -1651,8 +1690,8 @@
 
         for (var n = 0; n <= room_count; n++) {
           $("#room-" + n).hide();
-          $("#room-" + n).find("select").attr('id', 'room-type'+ n);
-          $("#room-" + n).find("select").attr('name', 'room_type'+ n);
+          $("#room-" + n).find("select").attr('id', 'service-type'+ n);
+          $("#room-" + n).find("select").attr('name', 'service_type'+ n);
           $("#room-" + n).find("select").attr('disabled',true);
           $("#room-" + n).find("h4").text("Select Room #" + n);
         }
@@ -1781,7 +1820,7 @@
              s.destroy();
          }
 
-         $('.room-type').select2({
+         $('.service-type').select2({
            minimumResultsForSearch: Infinity,
            templateResult: formatState,
            templateSelection: formatState,

@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 
-export default function Accommodations() {
+export default function Services() {
   // Carousel ke div ko target karne ke liye ek ref
   const carouselRef = useRef(null);
 
@@ -55,7 +55,7 @@ export default function Accommodations() {
         const owl = $(carouselRef.current);
         
         // YE CONSOLE LOG AB 100% AAYEGA
-        console.log('SUCCESS: Accommodations component found jQuery and Owl Carousel!');
+        console.log('SUCCESS: Services component found jQuery and Owl Carousel!');
 
         // Check karo ki carousel pehle se initialized to nahi hai
         // if (owl.hasClass('owl-loaded')) {

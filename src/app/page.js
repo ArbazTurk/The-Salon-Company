@@ -3,7 +3,7 @@ import HeroSlider from './components/HeroSlider';
 import Reservation from './components/Reservation';
 import Welcome from './components/Welcome';
 import Testimonials from './components/Testimonials';
-import Accommodations from './components/Accommodations';
+import Services from './components/Services';
 import Facilities from './components/Facilities';
 import InstagramFeed from './components/InstagramFeed';
 import Footer from './components/Footer';
@@ -23,7 +23,7 @@ export default function Home() {
         <Reservation />
         <Welcome />
         <Testimonials />
-        <Accommodations />
+        <Services />
         <Facilities />
         <InstagramFeed />
       </div>

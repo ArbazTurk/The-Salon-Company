@@ -64,7 +64,7 @@ export default function Facilities() {
               <div className="player wow scaleIn"><span></span></div>
             </div>
             <div className="absolute w-100 h-100 top-0 bg-dark hover-op-05"></div>
-            <img src="/images/background/2.webp" className="img-fluid" alt="Promotional Video Thumbnail" />
+            <img src="/images/video thumbnail.jpg" className="img-fluid" alt="Promotional Video Thumbnail" />
           </div>
         </a>
       </section>
