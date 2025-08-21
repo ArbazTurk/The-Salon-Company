@@ -57,7 +57,7 @@ export default function HeroSlider() {
                         <h1 className="slider-title mb-4">Where Artistry Meets Radiance</h1>
                         <p className="col-lg-8 offset-lg-2 slider-teaser px-4 mb-0">Welcome to a sanctuary of beauty, where the art of permanent makeup and luxurious treatments transform and rejuvenate your natural glow.</p>
                         <div className="spacer-30"></div>
-                        <Link className="btn-main mb10 mb-3" href="/rooms">View Our Services</Link>
+                        <a className="btn-main mb10 mb-3" href="/services">View Our Services</a>
                       </div>
                     </div>
                     <div className="spacer-single"></div>
