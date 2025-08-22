@@ -124,7 +124,7 @@ export default function ReservationPage() {
                       <div className="select-room">
                         <h4>Select a Service</h4>
                         {/* --- NEW GROUPED DROPDOWN --- */}
-                        <select id="service" className="form-control" name="service" value={formData.service} onChange={handleInputChange}>
+                        <select id="service" className="service-type form-control" name="service" value={formData.service} onChange={handleInputChange}>
                           {Object.keys(allServicesData).map(category => (
                             <optgroup label={category.toUpperCase()} key={category}>
                               {allServicesData[category].map(service => (

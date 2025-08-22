@@ -53,7 +53,7 @@ export default function ContactPage() {
               <div className="col-lg-6 text-center">
                 <h1>Contact Us</h1>
                 <p className="lead mt-3">
-                  Have a question about our services or want to schedule a consultation? We're here to help you shine. Get in touch with our expert team.
+                  Have a question about our services or want to schedule a consultation? We&apos;re here to help you shine. Get in touch with our expert team.
                 </p>
                 <ul className="crumb">
                   <li><Link href="/">Home</Link></li>

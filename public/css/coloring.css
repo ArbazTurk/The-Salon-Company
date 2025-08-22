@@ -270,7 +270,7 @@ section.dark {
 
 .feature-box-group .d-card i,
 .accordion-section-title.active,
-.accordion.secondary .accordion-section-title:before
+.accordion.secondary .accordion-section-title:before,
 .d-card i {
     background: var(--primary-color);
 }

@@ -16,7 +16,7 @@ export default function Footer() {
               <div>
                 {/* Use Link component for the logo to navigate home */}
                 <Link href="/">
-                    <img src="/images/The_Salon_Company_Logo.png" className="w-300px" alt="The Salon Company Logo" />
+                    <img src="/images/The_Salon_Company_Logo_White.png" className="w-250px" alt="The Salon Company Logo" />
                 </Link>
                 <br />
                 <div className="social-icons mb-sm-30 mt-4">
