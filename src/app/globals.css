@@ -40,3 +40,107 @@ a {
     color-scheme: dark;
   }
 } */
+
+.parallax-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.parallax-img-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 140%;
+  top: -20%;
+  left: 0;
+}
+
+.tabs-nav {
+  margin-bottom: 3rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+.tabs-nav button {
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #888;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+.tabs-nav button.active,
+.tabs-nav button:hover {
+  color: #111;
+  border-bottom: 2px solid var(--primary-color, #c77b3b);
+}
+
+/* Styles for the pricing inside the card */
+.original-price-card {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.7);
+  margin-right: 10px;
+}
+.discount-badge-card {
+  background: var(--primary-color, #c77b3b);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+/* Swiper Pagination Dots ki styling (Owl Carousel jaisi) */
+/* .owl-single-dots .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px !important;
+  background: #d6d6d6;
+  opacity: 1;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.owl-single-dots .swiper-pagination-bullet-active {
+  background: #869791;
+} */
+
+/* Optional: Datepicker ko aapke theme jaisa look dene ke liye kuch custom styles */
+.react-datepicker-wrapper .form-control {
+    background: none; /* Make background transparent */
+}
+.react-datepicker__header {
+    background-color: var(--primary-color) !important;
+    border-bottom: none !important;
+}
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+    color: #ffffff !important;
+}
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+    background-color: var(--primary-color) !important;
+}
+
+/* Instagram Feed ke liye zaroori CSS */
+.instagram-image-container {
+  position: relative;
+  width: 100%;
+  /* Yeh 1:1 aspect ratio banata hai (square) */
+  padding-top: 100%; 
+}
+
+.instagram-image-container .image-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 105%;
+  height: 105%;
+}

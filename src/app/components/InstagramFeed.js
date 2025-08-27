@@ -1,16 +1,19 @@
-import React from "react";
-import Link from "next/link";
+'use client'; 
 
-// Helper function to split array into chunks
-function chunkArray(array, chunkSize) {
-  const chunks = [];
-  for (let i = 0; i < array.length; i += chunkSize) {
-    chunks.push(array.slice(i, i + chunkSize));
-  }
-  return chunks;
-}
+import React, { useEffect } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import 'animate.css';
 
-export default function InstagramFeed() {
+const InstagramFeed = () => {
+  useEffect(() => {
+    import('wowjs').then(WOW => {
+      new WOW.default.WOW({
+        live: false,
+      }).init();
+    });
+  }, []);
+
   const instagramImages = [
     "/images/the_salon_company/1.JPG",
     "/images/the_salon_company/2.JPG",
@@ -22,8 +25,14 @@ export default function InstagramFeed() {
     "/images/the_salon_company/8.JPG",
   ];
 
+  function chunkArray(array, chunkSize) {
+    const chunks = [];
+    for (let i = 0; i < array.length; i += chunkSize) {
+      chunks.push(array.slice(i, i + chunkSize));
+    }
+    return chunks;
+  }
 
-  // Split into two chunks of 4
   const imageChunks = chunkArray(instagramImages, 4);
 
   return (
@@ -46,19 +55,28 @@ export default function InstagramFeed() {
               <div className="row g-0">
                 {chunk.map((src, index) => (
                   <div className="col-3" key={index}>
-                    <a
-                      href="#"
-                      className="d-block hover relative overflow-hidden text-light h-100"
+                    <Link
+                      href="https://www.instagram.com/the_salon_company"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="d-block hover relative overflow-hidden text-light wow fadeInUp"
+                      data-wow-delay={`${(colIndex * 4 + index) * 0.05}s`}
                     >
-                      <img
-                        src={src}
-                        className="w-100 hover-scale-1-1 object-fit-cover h-100"
-                        alt={`Instagram post ${colIndex * 4 + index + 1}`}
-                      />
-                      <div className="abs abs-centered fs-24 text-white hover-op-0">
-                        <i className="fa-brands fa-instagram"></i>
+                      {/* 1. BADLAV YAHAN HAI: Ek naya container div joda gaya hai */}
+                      <div className="instagram-image-container">
+                        <div className="image-fill">
+                          <Image
+                            src={src}
+                            fill
+                            className="hover-scale-1-1 object-fit-cover"
+                            alt={`Instagram post ${colIndex * 4 + index + 1}`}
+                          />
+                        </div>
+                        <div className="abs abs-centered fs-24 text-white hover-op-0">
+                          <i className="fa-brands fa-instagram"></i>
+                        </div>
                       </div>
-                    </a>
+                    </Link>
                   </div>
                 ))}
               </div>
@@ -68,7 +86,176 @@ export default function InstagramFeed() {
       </div>
     </section>
   );
-}
+};
+
+export default InstagramFeed;
+
+
+// 'use client'; // Client component for WOW.js animations
+
+// import React, { useEffect } from 'react';
+// import Link from 'next/link';
+// import Image from 'next/image'; // 1. Next.js Image component ka istemal
+
+// // 2. WOW.js ke liye zaroori imports
+// import 'animate.css';
+
+// const InstagramFeed = () => {
+//   // 3. WOW.js ko initialize karein
+//   useEffect(() => {
+//     import('wowjs').then(WOW => {
+//       new WOW.default.WOW({
+//         live: false,
+//       }).init();
+//     });
+//   }, []);
+
+//   const instagramImages = [
+//     "/images/the_salon_company/1.JPG",
+//     "/images/the_salon_company/2.JPG",
+//     "/images/the_salon_company/3.JPG",
+//     "/images/the_salon_company/4.JPG",
+//     "/images/the_salon_company/5.JPG",
+//     "/images/the_salon_company/6.JPG",
+//     "/images/the_salon_company/7.JPG",
+//     "/images/the_salon_company/8.JPG",
+//   ];
+
+//   // Helper function to split array into chunks
+//   function chunkArray(array, chunkSize) {
+//     const chunks = [];
+//     for (let i = 0; i < array.length; i += chunkSize) {
+//       chunks.push(array.slice(i, i + chunkSize));
+//     }
+//     return chunks;
+//   }
+
+//   const imageChunks = chunkArray(instagramImages, 4);
+
+//   return (
+//     <section className="bg-light relative pt50 no-bottom">
+//       <div className="container relative z-2">
+//         <div className="row g-4">
+//           <div className="col-lg-8 offset-lg-2 mb-4 text-center">
+//             <div className="subtitle id-color wow fadeInUp mb-3">
+//               Our Instagram
+//             </div>
+//             <h2 className="wow fadeInUp">@the_salon_company</h2>
+//           </div>
+//         </div>
+//       </div>
+
+//       <div className="container-fluid">
+//         <div className="row g-0">
+//           {imageChunks.map((chunk, colIndex) => (
+//             <div className="col-md-6" key={colIndex}>
+//               <div className="row g-0">
+//                 {chunk.map((src, index) => (
+//                   <div className="col-3" key={index}>
+//                     {/* 4. Link component ka istemal karein (agar aapka Instagram link hai) */}
+//                     <Link
+//                       href="https://www.instagram.com/the_salon_company" // Apne Instagram URL se replace karein
+//                       target="_blank" // Naye tab mein kholne ke liye
+//                       rel="noopener noreferrer"
+//                       className="d-block hover relative overflow-hidden text-light h-100 wow fadeInUp"
+//                       data-wow-delay={`${(colIndex * 4 + index) * 0.05}s`} // Animation delay
+//                     >
+//                       {/* 5. <img> ko Next.js Image component se replace karein */}
+//                       <Image
+//                         src={src}
+//                         layout="fill"
+//                         objectFit="cover"
+//                         className="w-100 hover-scale-1-1"
+//                         alt={`Instagram post ${colIndex * 4 + index + 1}`}
+//                       />
+//                       <div className="abs abs-centered fs-24 text-white hover-op-0">
+//                         <i className="fa-brands fa-instagram"></i>
+//                       </div>
+//                     </Link>
+//                   </div>
+//                 ))}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default InstagramFeed;
+
+
+// import React from "react";
+
+// // Helper function to split array into chunks
+// function chunkArray(array, chunkSize) {
+//   const chunks = [];
+//   for (let i = 0; i < array.length; i += chunkSize) {
+//     chunks.push(array.slice(i, i + chunkSize));
+//   }
+//   return chunks;
+// }
+
+// export default function InstagramFeed() {
+//   const instagramImages = [
+//     "/images/the_salon_company/1.JPG",
+//     "/images/the_salon_company/2.JPG",
+//     "/images/the_salon_company/3.JPG",
+//     "/images/the_salon_company/4.JPG",
+//     "/images/the_salon_company/5.JPG",
+//     "/images/the_salon_company/6.JPG",
+//     "/images/the_salon_company/7.JPG",
+//     "/images/the_salon_company/8.JPG",
+//   ];
+
+
+//   // Split into two chunks of 4
+//   const imageChunks = chunkArray(instagramImages, 4);
+
+//   return (
+//     <section className="bg-light relative pt50 no-bottom">
+//       <div className="container relative z-2">
+//         <div className="row g-4">
+//           <div className="col-lg-8 offset-lg-2 mb-4 text-center">
+//             <div className="subtitle id-color wow fadeInUp mb-3">
+//               Our Instagram
+//             </div>
+//             <h2 className="wow fadeInUp">@the_salon_company</h2>
+//           </div>
+//         </div>
+//       </div>
+
+//       <div className="container-fluid">
+//         <div className="row g-0">
+//           {imageChunks.map((chunk, colIndex) => (
+//             <div className="col-md-6" key={colIndex}>
+//               <div className="row g-0">
+//                 {chunk.map((src, index) => (
+//                   <div className="col-3" key={index}>
+//                     <a
+//                       href="#"
+//                       className="d-block hover relative overflow-hidden text-light h-100"
+//                     >
+//                       <img
+//                         src={src}
+//                         className="w-100 hover-scale-1-1 object-fit-cover h-100"
+//                         alt={`Instagram post ${colIndex * 4 + index + 1}`}
+//                       />
+//                       <div className="abs abs-centered fs-24 text-white hover-op-0">
+//                         <i className="fa-brands fa-instagram"></i>
+//                       </div>
+//                     </a>
+//                   </div>
+//                 ))}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
 
 
 // import React from "react";

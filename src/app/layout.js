@@ -1,14 +1,10 @@
 "use client";
-import "../../public/css/colors/scheme-01.css";
+import "react-datepicker/dist/react-datepicker.css";
+import "../../public/css/coloring.css";
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../public/css/plugins.css";
-// import "../../public/css/swiper.css";
 // import "../../public/css/style.css";
-import "../../public/css/coloring.css";
-
-
-import Script from "next/script";
 
 export default function RootLayout({ children }) {
   return (
@@ -38,7 +34,7 @@ export default function RootLayout({ children }) {
         <Script src="/js/custom-marquee.js" strategy="lazyOnload" />
         <Script src="/js/swiper.js" strategy="lazyOnload" /> */}
         {/* Load jQuery (from plugins.js) first as other scripts depend on it */}
-        <Script src="/js/plugins.js" strategy="afterInteractive" />
+        {/* <Script src="/js/plugins.js" strategy="afterInteractive" /> */}
 
         {/* Load other scripts that depend on jQuery */}
         {/* <Script src="/js/custom-marquee.js" strategy="afterInteractive" /> */}

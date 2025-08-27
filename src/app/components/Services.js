@@ -1,9 +1,19 @@
 'use client';
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import Link from 'next/link';
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+// Import required modules
+import { Navigation } from 'swiper/modules';
+
 export default function Services() {
-  const carouselRef = useRef(null);
+  const swiperRef = useRef(null);
 
   // Since we don't have images for every new service, we'll reuse the existing ones.
   const availableImages = [
@@ -61,54 +71,6 @@ export default function Services() {
     }
   ];
 
-  // The useEffect for initializing Owl Carousel remains the same, as the structure is the same.
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (typeof window !== 'undefined' && window.jQuery && window.jQuery.fn.owlCarousel) {
-        const $ = window.jQuery;
-        const owl = $(carouselRef.current);
-
-        // if (owl.hasClass('owl-loaded')) { return; }
-
-        owl.owlCarousel({
-          center: false,
-          items: 1,
-          loop: true,
-          margin: 30,
-          nav: false,
-          dots: false,
-          responsive: {
-            1000: { items: 3 },
-            600: { items: 2 },
-            0: { items: 1 }
-          }
-        });
-
-        $('.owl-custom-nav .btn-next').on('click', function () {
-          owl.trigger('next.owl.carousel');
-        });
-
-        $('.owl-custom-nav .btn-prev').on('click', function () {
-          owl.trigger('prev.owl.carousel');
-        });
-      } else {
-        console.error("ERROR: jQuery or Owl Carousel not found after 100ms delay in Services component.");
-      }
-    }, 100);
-
-    return () => {
-      clearTimeout(timer);
-      if (window.jQuery) {
-        $('.owl-custom-nav .btn-next').off('click');
-        $('.owl-custom-nav .btn-prev').off('click');
-        const owl = window.jQuery(carouselRef.current);
-        if (owl.length > 0 && owl.data('owl.carousel')) {
-          owl.trigger('destroy.owl.carousel');
-        }
-      }
-    };
-  }, []);
-
   return (
     <section className="relative bg-light lines-deco">
       <div className="container-fluid relative z-2">
@@ -120,33 +82,57 @@ export default function Services() {
 
           <div className="col-lg-12">
             <div className="owl-custom-nav menu-float px-5">
-              <a className="btn-next"></a>
-              <a className="btn-prev"></a>
+              <a className="btn-prev" role="button" tabIndex="0"></a>
+              <a className="btn-next" role="button" tabIndex="0"></a>
 
-              <div ref={carouselRef} id="services-carousel" className="owl-3-cols owl-carousel owl-theme">
+              <Swiper
+                ref={swiperRef}
+                modules={[Navigation]}
+                spaceBetween={30}
+                slidesPerView={1}
+                navigation={{
+                  nextEl: '.btn-next',
+                  prevEl: '.btn-prev',
+                }}
+                loop={true}
+                breakpoints={{
+                  1000: {
+                    slidesPerView: 3,
+                  },
+                  600: {
+                    slidesPerView: 2,
+                  },
+                  0: {
+                    slidesPerView: 1,
+                  },
+                }}
+                className="owl-3-cols owl-carousel owl-theme"
+              >
                 {featuredServices.map((service, index) => (
-                  <div className="item" key={index}>
-                    <div className="hover relative text-light text-center wow fadeInUp" data-wow-delay={service.delay}>
-                      <img src={service.imgSrc} className="w-100 rounded-up-100" alt={service.title} />
-                      <div className="abs hover-op-1 z-4 hover-mt-40 abs-centered">
-                        <div className="fs-14">Starting From</div>
-                        {/* Using Math.round to remove decimals from price */}
-                        <h3 className="fs-40 lh-1 mb-4">₹{Math.round(service.price)}</h3>
-                        <Link className="btn-line" href="/reservation">Book Now</Link>
-                      </div>
-                      <div className="abs bg-color z-2 top-0 w-100 h-100 hover-op-1 rounded-up-100"></div>
-                      <div className="abs z-2 bottom-0 mb-3 w-100 text-center hover-op-0">
-                        <h3 className="mb-0">{service.title}</h3>
-                        <div className="text-center fs-14">
-                           {/* Replaced guests/size with a more relevant tagline */}
-                          <span className="mx-2">{service.tagline}</span>
+                  <SwiperSlide key={index}>
+                    <div className="item">
+                      <div className="hover relative text-light text-center wow fadeInUp" data-wow-delay={service.delay}>
+                        <img src={service.imgSrc} className="w-100 rounded-up-100" alt={service.title} />
+                        <div className="abs hover-op-1 z-4 hover-mt-40 abs-centered">
+                          <div className="fs-14">Starting From</div>
+                          {/* Using Math.round to remove decimals from price */}
+                          <h3 className="fs-40 lh-1 mb-4">₹{Math.round(service.price)}</h3>
+                          <Link className="btn-line" href="/reservation">Book Now</Link>
                         </div>
+                        <div className="abs bg-color z-2 top-0 w-100 h-100 hover-op-1 rounded-up-100"></div>
+                        <div className="abs z-2 bottom-0 mb-3 w-100 text-center hover-op-0">
+                          <h3 className="mb-0">{service.title}</h3>
+                          <div className="text-center fs-14">
+                             {/* Replaced guests/size with a more relevant tagline */}
+                            <span className="mx-2">{service.tagline}</span>
+                          </div>
+                        </div>
+                        <div className="gradient-trans-color-bottom abs w-100 h-40 bottom-0"></div>
                       </div>
-                      <div className="gradient-trans-color-bottom abs w-100 h-40 bottom-0"></div>
                     </div>
-                  </div>
+                  </SwiperSlide>
                 ))}
-              </div>
+              </Swiper>
             </div>
           </div>
         </div>

@@ -1,129 +1,226 @@
-import React from 'react';
+"use client";
 
-export default function Welcome() {
+import React, { useEffect } from "react";
+import Image from "next/image";
+import { ParallaxProvider, Parallax } from "react-scroll-parallax";
+import "animate.css";
+
+const Welcome = () => {
+  useEffect(() => {
+    import("wowjs").then((WOW) => {
+      new WOW.default.WOW({
+        live: false,
+      }).init();
+    });
+  }, []);
+
   return (
-    <section className="relative lines-deco">
-      <div className="container">
-        <div className="row g-4">
-          <div className="col-lg-4 sm-hide">
-            <div className="relative wow fadeInUp" data-wow-delay=".3s">
-              <div className="abs top-0 w-100">
-                <div className="shape-mask-1 jarallax">
-                  <img src="/images/welcome 1.jpg" className="jarallax-img" alt="" />
+    <ParallaxProvider>
+      <section className="relative lines-deco">
+        <div className="container">
+          <div className="row g-4">
+            <div className="col-lg-4 sm-hide">
+              <div className="relative wow fadeInUp" data-wow-delay=".3s">
+                <div className="abs top-0 w-100 h-100">
+                  <div className="shape-mask-1">
+                    <Parallax speed={-15} className="parallax-container">
+                      <Image
+                        src="/images/welcome 1.jpg"
+                        fill
+                        className="object-fit-cover"
+                        alt="Salon Welcome Image 1"
+                        priority
+                      />
+                    </Parallax>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="col-lg-4 text-center">
-            <div className="wow scaleIn">
-              <div className="subtitle id-color mb-3">Welcome To The Salon Company</div>
-              <h2 className="wow fadeInUp">Expert Artistry & Personalized Care</h2>
-
-              <div className="text-center wow fadeInUp" data-wow-delay=".5s">
-                <h4 className="fw-bold mb-1">4.9 out of 5</h4>
-                <div className="de-rating-ext fs-18">
-                  <span className="d-stars">
-                    <i className="icofont-star"></i>
-                    <i className="icofont-star"></i>
-                    <i className="icofont-star"></i>
-                    <i className="icofont-star"></i>
-                    <i className="icofont-star"></i>
+            <div className="col-lg-4 text-center">
+              <div className="wow scaleIn">
+                <div className="subtitle id-color mb-3">
+                  Welcome To The Salon Company
+                </div>
+                <h2 className="wow fadeInUp">
+                  Expert Artistry & Personalized Care
+                </h2>
+                <div className="text-center wow fadeInUp" data-wow-delay=".5s">
+                  <h4 className="fw-bold mb-1">4.9 out of 5</h4>
+                  <div className="de-rating-ext fs-18">
+                    <span className="d-stars">
+                      <i className="icofont-star"></i>
+                      <i className="icofont-star"></i>
+                      <i className="icofont-star"></i>
+                      <i className="icofont-star"></i>
+                      <i className="icofont-star"></i>
+                    </span>
+                  </div>
+                  <span className="d-block fs-14 mb-0">
+                    Based on 25000+ reviews
                   </span>
                 </div>
-                {/* Based on hundreds of happy clients */}
-                <span className="d-block fs-14 mb-0">Based on 25000+ reviews</span>
+              </div>
+            </div>
+
+            <div className="col-lg-4 sm-hide">
+              <div className="relative wow fadeInUp" data-wow-delay=".3s">
+                <div className="abs top-0 w-100 h-100">
+                  <div className="shape-mask-1">
+                    <Parallax speed={-15} className="parallax-container">
+                      <Image
+                        src="/images/welcome 2.jpg"
+                        fill
+                        className="object-fit-cover"
+                        alt="Salon Welcome Image 2"
+                        priority
+                      />
+                    </Parallax>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="col-lg-4 sm-hide">
-            <div className="relative wow fadeInUp" data-wow-delay=".3s">
-              <div className="abs top-0 w-100">
-                <div className="shape-mask-1 jarallax">
-                  <img src="/images/welcome 2.jpg" className="jarallax-img" alt="" />
+          <div className="spacer-double"></div>
+
+          <div className="row g-4 relative z-2">
+            <div
+              className="col-lg-4 col-md-6 wow fadeInUp"
+              data-wow-delay=".3s"
+            >
+              <div className="relative p-4 bg-white border-grey">
+                <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
+                  <img
+                    src="/images/icons/permanent makeup.png"
+                    className="w-100"
+                    alt=""
+                  />
+                </span>
+                <div className="pl-90">
+                  <h4>Permanent Makeup</h4>
+                  <p className="mb-0">
+                    Achieve lasting beauty with our expert microblading, lip
+                    blushing, and eyeliner tattoo services.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="col-lg-4 col-md-6 wow fadeInUp"
+              data-wow-delay=".4s"
+            >
+              <div className="relative p-4 bg-white border-grey">
+                <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
+                  <img
+                    src="/images/icons/beauty treatment.png"
+                    className="w-100"
+                    alt=""
+                  />
+                </span>
+                <div className="pl-90">
+                  <h4>Beauty Treatments</h4>
+                  <p className="mb-0">
+                    Rejuvenate your skin and spirit with our Luxury Facials, BB
+                    Glow, and Eyebrow Lamination.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="col-lg-4 col-md-6 wow fadeInUp"
+              data-wow-delay=".5s"
+            >
+              <div className="relative p-4 bg-white border-grey">
+                <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
+                  <img
+                    src="/images/icons/eyelash extensions.png"
+                    className="w-100"
+                    alt=""
+                  />
+                </span>
+                <div className="pl-90">
+                  <h4>Eyelash Extensions</h4>
+                  <p className="mb-0">
+                    Enhance your look with Classic, Hybrid, Volume, or Colorful
+                    lash extensions for stunning eyes.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="col-lg-4 col-md-6 wow fadeInUp"
+              data-wow-delay=".6s"
+            >
+              <div className="relative p-4 bg-white border-grey">
+                <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
+                  <img
+                    src="/images/svg/flower-lotus-thin-svgrepo-com.svg"
+                    className="w-100"
+                    alt=""
+                  />
+                </span>
+                <div className="pl-90">
+                  <h4>Spa &amp; Massage</h4>
+                  <p className="mb-0">
+                    Relax and recharge with our calming massages and
+                    rejuvenating spa treatments.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="col-lg-4 col-md-6 wow fadeInUp"
+              data-wow-delay=".7s"
+            >
+              <div className="relative p-4 bg-white border-grey">
+                <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
+                  <img
+                    src="/images/icons/hair artistry.png"
+                    className="w-100"
+                    alt=""
+                  />
+                </span>
+                <div className="pl-90">
+                  <h4>Hair & Nail Artistry</h4>
+                  <p className="mb-0">
+                    From chic hairstyles to intricate nail designs, our artists
+                    are here to perfect your style.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="col-lg-4 col-md-6 wow fadeInUp"
+              data-wow-delay=".8s"
+            >
+              <div className="relative p-4 bg-white border-grey">
+                <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
+                  <img
+                    src="/images/icons/premium products.png"
+                    className="w-100"
+                    alt="Premium Products Icon"
+                  />
+                </span>
+                <div className="pl-90">
+                  <h4>Premium Products</h4>
+                  <p className="mb-0">
+                    We use only the finest, industry-leading pigments and
+                    products for flawless, lasting results.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        <div className="spacer-double"></div>
-
-        <div className="row g-4 relative z-2">
-          <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-            <div className="relative p-4 bg-white border-grey">
-              <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
-                <img src="/images/icons/permanent makeup.png" className="w-100" alt="" />
-              </span>
-              <div className="pl-90">
-                <h4>Permanent Makeup</h4>
-                <p className="mb-0">Achieve lasting beauty with our expert microblading, lip blushing, and eyeliner tattoo services.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
-            <div className="relative p-4 bg-white border-grey">
-              <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
-                <img src="/images/icons/beauty treatment.png" className="w-100" alt="" />
-              </span>
-              <div className="pl-90">
-                <h4>Beauty Treatments</h4>
-                <p className="mb-0">Rejuvenate your skin and spirit with our Luxury Facials, BB Glow, and Eyebrow Lamination.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-            <div className="relative p-4 bg-white border-grey">
-              <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
-                <img src="/images/icons/eyelash extensions.png" className="w-100" alt="" />
-              </span>
-              <div className="pl-90">
-                <h4>Eyelash Extensions</h4>
-                <p className="mb-0">Enhance your look with Classic, Hybrid, Volume, or Colorful lash extensions for stunning eyes.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".6s">
-            <div className="relative p-4 bg-white border-grey">
-              <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
-                <img src="/images/svg/flower-lotus-thin-svgrepo-com.svg" className="w-100" alt="" />
-              </span>
-              <div className="pl-90">
-                <h4>Spa &amp; Massage</h4>
-                <p className="mb-0">Relax and recharge with our calming massages and rejuvenating spa treatments.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".7s" >
-            <div className="relative p-4 bg-white border-grey">
-              <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
-                <img src="/images/icons/hair artistry.png" className="w-100" alt="" />
-              </span>
-              <div className="pl-90">
-                <h4>Hair & Nail Artistry</h4>
-                <p className="mb-0">From chic hairstyles to intricate nail designs, our artists are here to perfect your style.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".8s">
-            <div className="relative p-4 bg-white border-grey">
-              <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
-                <img src="/images/icons/premium products.png" className="w-100" alt="" />
-              </span>
-              <div className="pl-90">
-                <h4>Premium Products</h4>
-                <p className="mb-0">We use only the finest, industry-leading pigments and products for flawless, lasting results.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </ParallaxProvider>
   );
-}
+};
+
+export default Welcome;

@@ -13,15 +13,15 @@ import { useExternalScript } from '../hooks/useExternalScript';
 
 export default function Home() {
   // Load designesia.js script using the custom hook
-  const { loaded, error } = useExternalScript('/js/designesia.js');
+  // const { loaded, error } = useExternalScript('/js/designesia.js');
 
-  // Optional: Handle loading states
-  if (error) {
-    console.error('Failed to load designesia.js');
-  }
+  // // Optional: Handle loading states
+  // if (error) {
+  //   console.error('Failed to load designesia.js');
+  // }
 
-  // You can use the 'loaded' state if you need to wait for the script
-  console.log('Script loaded:', loaded);
+  // // You can use the 'loaded' state if you need to wait for the script
+  // console.log('Script loaded:', loaded);
 
   return (
     <>

@@ -10,6 +10,11 @@
 @import url("../fonts/et-line-font/style.css");
 @import url("../fonts/icofont/icofont.min.css");
 
+:root {
+  --primary-color: #ab8965;
+  --primary-color-rgb: 171, 137, 101;
+}
+
 * {
   --title-font: "Marcellus", Helvetica, Arial, sans-serif;
   --body-font-size: 16px;
@@ -13569,6 +13574,7 @@ input.text-center{
 }
 
 .shape-mask-1{
+  position: relative;
   width: 100%;
   padding-top: 100%;
   backdrop-filter: blur(20px);
@@ -13576,6 +13582,13 @@ input.text-center{
   -moz-border-radius:100% 100% 0 0;
   -webkit-border-radius:100% 100% 0 0;
   overflow: hidden;
+}
+.parallax-container {
+  position: absolute;
+  width: 100%;
+  height: 130%; /* Mask se 30% lamba, taaki scroll karne ke liye jagah ho */
+  top: -15%;     /* Vertically center karne ke liye */
+  left: 0;
 }
 
 .shape-mask-2{
@@ -13922,6 +13935,10 @@ p.slider-teaser{
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+.id-color{
+  color: var(--primary-color);
 }
 
 .dark-scheme .subtitle:not(.id-color), .text-light .subtitle:not(.id-color){
