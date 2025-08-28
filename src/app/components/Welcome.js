@@ -100,7 +100,7 @@ const Welcome = () => {
                 <div className="pl-90">
                   <h4>Precision Haircuts</h4>
                   <p className="mb-0">
-                    From classic men's cuts to modern styles, our stylists deliver sharp, personalized results every time.
+                    From classic men&apos;s cuts to modern styles, our stylists deliver sharp, personalized results every time.
                   </p>
                 </div>
               </div>

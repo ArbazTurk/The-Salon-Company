@@ -36,8 +36,8 @@ export default function ServicesPage() {
               <Parallax speed={-20} className="parallax-img-wrapper">
                 <Image
                   src="/images/the_salon_company/7.JPG"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  className='object-fit-cover'
                   alt="Our Services Background"
                   priority
                 />
