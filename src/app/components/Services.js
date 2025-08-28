@@ -2,20 +2,16 @@
 import React, { useRef } from 'react';
 import Link from 'next/link';
 
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-// Import required modules
 import { Navigation } from 'swiper/modules';
 
 export default function Services() {
   const swiperRef = useRef(null);
 
-  // Since we don't have images for every new service, we'll reuse the existing ones.
   const availableImages = [
     "/images/services/lokaci services microblading 533x533.jpg",
     "/images/services/lokaci services luxury facial 533x533.jpg",
@@ -25,46 +21,45 @@ export default function Services() {
     "/images/services/lokaci services eyeliner tattoo 533x533.jpg"
   ];
 
-  // We are hand-picking a few "Featured Services" from your new JSON data to show on the homepage.
   const featuredServices = [
     {
-      imgSrc: availableImages[0], // Reusing image
-      price: 3555, // from your JSON (Keratin Treatment)
+      imgSrc: availableImages[0],
+      price: 3555,
       title: "Keratin Treatment",
       tagline: "Smooth, Frizz-Free Hair",
       delay: ".3s"
     },
     {
-      imgSrc: availableImages[1], // Reusing image
-      price: 4000, // from your JSON (Hydra Facial)
+      imgSrc: availableImages[1],
+      price: 4000,
       title: "Hydra Facial",
       tagline: "Deep Cleanse & Hydration",
       delay: ".4s"
     },
     {
-      imgSrc: availableImages[2], // Reusing image
-      price: 1600, // from your JSON (Full Body Massage)
+      imgSrc: availableImages[2],
+      price: 1600,
       title: "Full Body Massage",
       tagline: "Relax & Rejuvenate",
       delay: ".5s"
     },
     {
-      imgSrc: availableImages[3], // Reusing image
-      price: 3900, // from your JSON (Botox Treatment)
+      imgSrc: availableImages[3],
+      price: 3900,
       title: "Botox Hair Treatment",
       tagline: "Repair & Strengthen",
       delay: ".6s"
     },
     {
-      imgSrc: availableImages[4], // Reusing image
-      price: 2240, // from your JSON (Full Body D-Tan)
+      imgSrc: availableImages[4],
+      price: 2240,
       title: "Full Body D-Tan",
       tagline: "For a Radiant Glow",
       delay: ".7s"
     },
     {
-      imgSrc: availableImages[5], // Reusing image
-      price: 800, // from your JSON (Inoa Hair Coloring)
+      imgSrc: availableImages[5],
+      price: 800,
       title: "Inoa Hair Coloring",
       tagline: "Ammonia-Free Color",
       delay: ".8s"
@@ -115,7 +110,6 @@ export default function Services() {
                         <img src={service.imgSrc} className="w-100 rounded-up-100" alt={service.title} />
                         <div className="abs hover-op-1 z-4 hover-mt-40 abs-centered">
                           <div className="fs-14">Starting From</div>
-                          {/* Using Math.round to remove decimals from price */}
                           <h3 className="fs-40 lh-1 mb-4">₹{Math.round(service.price)}</h3>
                           <Link className="btn-line" href="/reservation">Book Now</Link>
                         </div>
@@ -123,7 +117,6 @@ export default function Services() {
                         <div className="abs z-2 bottom-0 mb-3 w-100 text-center hover-op-0">
                           <h3 className="mb-0">{service.title}</h3>
                           <div className="text-center fs-14">
-                             {/* Replaced guests/size with a more relevant tagline */}
                             <span className="mx-2">{service.tagline}</span>
                           </div>
                         </div>

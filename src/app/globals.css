@@ -1,46 +1,3 @@
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-} */
-
 .parallax-bg-container {
   position: absolute;
   top: 0;
@@ -98,7 +55,7 @@ a {
 }
 
 /* Swiper Pagination Dots ki styling (Owl Carousel jaisi) */
-.owl-single-dots .swiper-pagination-bullet {
+/* .owl-single-dots .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   margin: 5px 7px !important;
@@ -110,17 +67,18 @@ a {
 
 .owl-single-dots .swiper-pagination-bullet-active {
   background: #ab8965;
-}
+} */
+
 /* Swiper Testimonial container ke liye zaroori height */
 .testimonial-swiper-container {
-  min-height: 450px; /* Aap is value ko apni zaroorat ke hisab se adjust kar sakte hain */
+  min-height: 450px;
   display: flex;
-  align-items: center; /* Content ko vertically center mein rakhta hai */
+  align-items: center;
 }
 
 /* Optional: Datepicker ko aapke theme jaisa look dene ke liye kuch custom styles */
 .react-datepicker-wrapper .form-control {
-    background: none; /* Make background transparent */
+    background: none;
 }
 .react-datepicker__header {
     background-color: var(--primary-color) !important;
@@ -149,4 +107,143 @@ a {
   left: 0;
   width: 105%;
   height: 105%;
+}
+
+/* --- Section Container Styling --- */
+.testimonial-section {
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #181818;
+  padding: 80px 0;
+}
+
+/* --- Parallax Background Styling --- */
+.parallax-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.parallax-bg-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 140%;
+  top: -20%;
+  left: 0;
+}
+
+.parallax-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- Main Content Container --- */
+.custom-content-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-top: -200px;
+  max-width: 1000px;
+  width: 90%;
+}
+
+/* --- Swiper and Testimonial Content Styling --- */
+.custom-testimonial-swiper {
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.testimonial-slide {
+  text-align: center;
+}
+
+.testimonial-quote-icon {
+  color: #ab8965;
+  font-size: 40px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.testimonial-quote-text {
+  font-size: 36px;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  font-family: "Marcellus", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.testimonial-quote-author {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 20px;
+  font-family: "Jost", Helvetica, Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* --- Swiper Pagination Styling --- */
+.custom-testimonial-swiper .swiper-pagination {
+  position: static;
+  margin-top: 20px;
+}
+
+.custom-testimonial-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin: 0 7px;
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 1;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.custom-testimonial-swiper .swiper-pagination-bullet-active {
+  background: #ab8965;
+}
+
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+  .testimonial-section {
+    padding: 60px 0;
+  }
+  .abs-centered {
+    width: 50% !important;
+  }
+  .custom-testimonial-swiper {
+    min-height: 200px;
+  }
+  .custom-content-container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 576px) {
+  .testimonial-section {
+    padding: 40px 0;
+  }
+  .abs-centered {
+    width: 70% !important;
+  }
+  .testimonial-quote-text {
+    font-size: 24px !important;
+  }
+  .testimonial-quote-icon {
+    font-size: 30px !important;
+  }
+  .testimonial-quote-author {
+    font-size: 16px !important;
+  }
 }

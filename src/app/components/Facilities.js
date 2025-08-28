@@ -32,13 +32,6 @@ const FacilitiesSection = () => {
                   className="img-fluid wow fadeInUp"
                   alt="Happy Clients at The Salon Company"
                 />
-                {/* <Image 
-                  src="/images/the_salon_company/4.JPG" 
-                  className="img-fluid wow fadeInUp" 
-                  alt="Happy Clients at The Salon Company"
-                  width={800}
-                  height={533}
-                /> */}
                 <div className="bg-color text-light p-4 start-10 mx-4 mt-70 wow fadeInDown" style={{ position: 'sticky', zIndex: 1 }}>
                   <div className="row g-4 align-items-center">
                     <div className="col-lg-5 text-center">
@@ -77,13 +70,6 @@ const FacilitiesSection = () => {
                   className="img-fluid wow fadeInUp"
                   alt="Wide Range of Salon Services"
                 />
-                {/* <Image 
-                  src="/images/the_salon_company/facilities 1.jpg" 
-                  className="img-fluid wow fadeInUp" 
-                  alt="Wide Range of Salon Services"
-                  width={800}
-                  height={533}
-                /> */}
                 <div className="bg-color text-light p-4 start-10 mx-4 mt-70 wow fadeInDown" style={{ position: 'sticky', zIndex: 1 }}>
                   <div className="row g-4 align-items-center">
                     <div className="col-lg-5 text-center">
@@ -118,37 +104,6 @@ const FacilitiesSection = () => {
         </div>
         <div className="spacer-single"></div>
       </section>
-
-      {/* <section className="no-top no-bottom section-dark" aria-label="section">
-        <div 
-          className="d-block hover" 
-          onClick={() => setOpen(true)}
-          style={{ cursor: 'pointer' }}
-        >
-          <div className="relative overflow-hidden">
-            <div className="absolute start-0 w-100 abs-middle fs-36 text-white text-center z-2">
-              <div className="player wow scaleIn"><span></span></div>
-            </div>
-            <div className="absolute w-100 h-100 top-0 bg-dark hover-op-05"></div>
-            <Image 
-              src="/images/the_salon_company/video thumbnail.JPG" 
-              layout="fill"
-              objectFit="cover"
-              alt="Promotional Video Thumbnail" 
-            />
-          </div>
-        </div>
-      </section>
-      <Lightbox
-        open={open}
-        close={() => setOpen(false)}
-        slides={[
-          {
-            type: "youtube",
-            videoId: "C6rf51uHWJg",
-          },
-        ]}
-      /> */}
     </>
   );
 };

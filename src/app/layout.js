@@ -3,7 +3,6 @@ import "../../public/css/coloring.css";
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../public/css/plugins.css";
-// import "../../public/css/style.css";
 
 export default function RootLayout({ children }) {
   return (
