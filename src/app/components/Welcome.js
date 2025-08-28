@@ -43,7 +43,7 @@ const Welcome = () => {
                   Welcome To The Salon Company
                 </div>
                 <h2 className="wow fadeInUp">
-                  Expert Artistry & Personalized Care
+                  A New Standard in Grooming & Care
                 </h2>
                 <div className="text-center wow fadeInUp" data-wow-delay=".5s">
                   <h4 className="fw-bold mb-1">4.9 out of 5</h4>
@@ -92,16 +92,15 @@ const Welcome = () => {
               <div className="relative p-4 bg-white border-grey">
                 <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
                   <img
-                    src="/images/icons/permanent makeup.png"
+                    src="/images/icons/hair artistry.png"
                     className="w-100"
                     alt=""
                   />
                 </span>
                 <div className="pl-90">
-                  <h4>Permanent Makeup</h4>
+                  <h4>Precision Haircuts</h4>
                   <p className="mb-0">
-                    Achieve lasting beauty with our expert microblading, lip
-                    blushing, and eyeliner tattoo services.
+                    From classic men's cuts to modern styles, our stylists deliver sharp, personalized results every time.
                   </p>
                 </div>
               </div>
@@ -120,10 +119,9 @@ const Welcome = () => {
                   />
                 </span>
                 <div className="pl-90">
-                  <h4>Beauty Treatments</h4>
+                  <h4>Advanced Facials</h4>
                   <p className="mb-0">
-                    Rejuvenate your skin and spirit with our Luxury Facials, BB
-                    Glow, and Eyebrow Lamination.
+                    Revitalize your skin with Hydra Facials, O3+, and Casmara treatments.
                   </p>
                 </div>
               </div>
@@ -136,16 +134,15 @@ const Welcome = () => {
               <div className="relative p-4 bg-white border-grey">
                 <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
                   <img
-                    src="/images/icons/eyelash extensions.png"
+                    src="/images/icons/hair treatment icon.png"
                     className="w-100"
                     alt=""
                   />
                 </span>
                 <div className="pl-90">
-                  <h4>Eyelash Extensions</h4>
+                  <h4>Hair Treatments</h4>
                   <p className="mb-0">
-                    Enhance your look with Classic, Hybrid, Volume, or Colorful
-                    lash extensions for stunning eyes.
+                    Restore strength and shine with our premium Keratin, Botox, and customized hair spa solutions.
                   </p>
                 </div>
               </div>
@@ -180,16 +177,15 @@ const Welcome = () => {
               <div className="relative p-4 bg-white border-grey">
                 <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
                   <img
-                    src="/images/icons/hair artistry.png"
+                    src="/images/icons/beard trimming icon.png"
                     className="w-100"
                     alt=""
                   />
                 </span>
                 <div className="pl-90">
-                  <h4>Hair & Nail Artistry</h4>
+                  <h4>Beard Grooming</h4>
                   <p className="mb-0">
-                    From chic hairstyles to intricate nail designs, our artists
-                    are here to perfect your style.
+                    Perfect your look with expert beard trimming, shaving, and professional coloring services.
                   </p>
                 </div>
               </div>
@@ -210,8 +206,7 @@ const Welcome = () => {
                 <div className="pl-90">
                   <h4>Premium Products</h4>
                   <p className="mb-0">
-                    We use only the finest, industry-leading pigments and
-                    products for flawless, lasting results.
+                    We use only the finest, trusted and industry-leading brands to ensure exceptional results.
                   </p>
                 </div>
               </div>

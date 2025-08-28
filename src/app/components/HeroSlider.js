@@ -55,7 +55,7 @@ export default function HeroSlider() {
                           </span>
                         </div>
                         <h1 className="slider-title mb-4">Where Artistry Meets Radiance</h1>
-                        <p className="col-lg-8 offset-lg-2 slider-teaser px-4 mb-0">Welcome to a sanctuary of beauty, where the art of permanent makeup and luxurious treatments transform and rejuvenate your natural glow.</p>
+                        <p className="col-lg-8 offset-lg-2 slider-teaser px-4 mb-0">From precision haircuts and classic beard trims to revitalizing facials, our expert stylists provide a complete grooming experience tailored to you.</p>
                         <div className="spacer-30"></div>
                         <Link className="btn-main mb10 mb-3" href="/services">View Our Services</Link>
                       </div>
@@ -91,7 +91,7 @@ export default function HeroSlider() {
                           </span>
                         </div>
                         <h1 className="slider-title mb-4">Wake Up to Effortless Perfection</h1>
-                        <p className="col-lg-8 offset-lg-2 slider-teaser px-4 mb-0">Imagine perfectly sculpted brows, timeless eyeliner, and lips that exude confidence, all achieved with the finest pigments and techniques.</p>
+                        <p className="col-lg-8 offset-lg-2 slider-teaser px-4 mb-0">Discover a new standard of care with our advanced hair treatments, therapeutic massages, and a full suite of services designed for the modern individual.</p>
                         <div className="spacer-30"></div>
                         <Link className="btn-main mb10 mb-3" href="tel:8800026046">Free Consultation</Link>
                       </div>

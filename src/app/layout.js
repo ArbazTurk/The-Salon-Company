@@ -1,5 +1,4 @@
 "use client";
-import "react-datepicker/dist/react-datepicker.css";
 import "../../public/css/coloring.css";
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -25,23 +24,6 @@ export default function RootLayout({ children }) {
 
       <body>
         <div id="wrapper">{children}</div>
-        {/* 
-          Load scripts normally. They will re-run on every full page reload.
-          The `onLoad` and `useEffect` are no longer needed here because we are forcing reloads.
-        */}
-        {/* <Script src="/js/plugins.js" strategy="lazyOnload" />
-        <Script src="/js/designesia.js" strategy="lazyOnload" />
-        <Script src="/js/custom-marquee.js" strategy="lazyOnload" />
-        <Script src="/js/swiper.js" strategy="lazyOnload" /> */}
-        {/* Load jQuery (from plugins.js) first as other scripts depend on it */}
-        {/* <Script src="/js/plugins.js" strategy="afterInteractive" /> */}
-
-        {/* Load other scripts that depend on jQuery */}
-        {/* <Script src="/js/custom-marquee.js" strategy="afterInteractive" /> */}
-        {/* <Script src="/js/swiper.js" strategy="afterInteractive" /> */}
-        {/* custom-swiper-2.js is likely for a specific page, better to handle it there */}
-
-        {/* Note: designesia.js is now loaded using the useExternalScript hook in individual pages */}
       </body>
     </html>
   );

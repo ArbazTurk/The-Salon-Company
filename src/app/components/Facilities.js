@@ -48,7 +48,7 @@ const FacilitiesSection = () => {
                       >
                         <h3 className="fs-60">
                           <CountUp
-                            end={500}
+                            end={800}
                             duration={3}
                             enableScrollSpy
                             scrollSpyOnce
@@ -94,7 +94,7 @@ const FacilitiesSection = () => {
                         <h3 className="fs-60">
                           <CountUp
                             end={60}
-                            duration={3}
+                            duration={4}
                             enableScrollSpy
                             scrollSpyOnce
                           />

@@ -177,7 +177,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 import DatePicker from 'react-datepicker';
-
+import "react-datepicker/dist/react-datepicker.css";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { allServicesData } from '../services.js';
@@ -187,7 +187,7 @@ export default function ReservationPage() {
   const defaultService = allServicesData[firstCategory][0].service;
 
   const [formData, setFormData] = useState({
-    date: null, // Date ke liye null se start karein
+    date: null,
     service: defaultService,
     name: '',
     email: '',
@@ -239,11 +239,11 @@ export default function ReservationPage() {
             <div className="container relative z-index-1000">
               <div className="row justify-content-center">
                 <div className="col-lg-6 text-center">
-                  <h1>Book an Appointment</h1>
-                  <p className="mt-3 lead">Ready to embrace your most exquisite self? Book your appointment now and step into a sanctuary of pure, luxurious renewal.</p>
+                  <h1>Book your Appointment</h1>
+                  <p className="mt-3 lead">Select your desired service and preferred date to schedule your visit. Your journey to looking and feeling your best starts here.</p>
                   <ul className="crumb">
                     <li><Link href="/">Home</Link></li>
-                    <li className="active">Book an Appointment</li>
+                    <li className="active">Book Appointment</li>
                   </ul>
                 </div>
               </div>
@@ -276,7 +276,6 @@ export default function ReservationPage() {
                         <div className="row">
                           <div className="col-md-12">
                             <h4>Choose a Preferred Date</h4>
-                            {/* 3. React Datepicker ka istemal */}
                             <DatePicker
                               id="date-picker"
                               selected={formData.date}
@@ -293,10 +292,9 @@ export default function ReservationPage() {
 
                         <div className="select-room">
                           <h4>Select a Service</h4>
-                          {/* 4. Plain HTML select tag (Select2 ki zaroorat nahi) */}
                           <select 
                             id="service" 
-                            className="form-control" // form-control class use karein
+                            className="form-control"
                             name="service" 
                             value={formData.service} 
                             onChange={handleInputChange}

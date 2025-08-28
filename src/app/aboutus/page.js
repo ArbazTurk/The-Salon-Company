@@ -186,12 +186,12 @@ export default function AboutPage() {
   }, []);
 
   const salonFeatures = [
-    { icon: '/images/icons/hygiene.png', title: 'Sterilized Equipment', text: 'Your safety is our priority. We use medically sterilized, single-use equipment.' },
-    { icon: '/images/icons/pigment.png', title: 'Premium Pigments', text: 'We use the highest quality, vegan-friendly pigments for beautiful, lasting results.' },
-    { icon: '/images/icons/consult.png', title: 'Personalized Consultation', text: 'Every treatment begins with a thorough consultation to match your unique style.' },
-    { icon: '/images/icons/certified.png', title: 'Certified Artists', text: 'Our team consists of highly trained and certified professionals in their fields.' },
-    { icon: '/images/icons/ambiance.png', title: 'Relaxing Ambiance', text: 'Our studio is designed to be a sanctuary of calm, making your visit a tranquil escape.' },
-    { icon: '/images/icons/results.png', title: 'Flawless Results', text: 'We are dedicated to the art of perfection, ensuring you leave feeling confident.' }
+    { icon: '/images/icons/hygiene.png', title: 'Impeccable Hygiene', text: 'Your health and safety are paramount. We adhere to the highest standards of sanitation and use sterilized equipment.' },
+    { icon: '/images/icons/pigment.png', title: 'Premium Brands', text: 'We use trusted, industry-leading products like O3+, Casmara, and Inoa to deliver exceptional quality.' },
+    { icon: '/images/icons/consult.png', title: 'Personalized Consultation', text: 'Every service begins with understanding your needs to ensure results that perfectly match your style.' },
+    { icon: '/images/icons/certified.png', title: 'Certified Stylists', text: 'Our team is comprised of highly trained and certified professionals, true masters of their craft.' },
+    { icon: '/images/icons/ambiance.png', title: 'Relaxing Ambiance', text: 'Our salon is designed to be a sanctuary of calm, making every visit a tranquil and rejuvenating escape.' },
+    { icon: '/images/icons/results.png', title: 'Guaranteed Satisfaction', text: 'We are dedicated to the art of perfection, ensuring you leave our salon feeling confident and looking your best.' }
   ];
 
   return (
@@ -207,8 +207,8 @@ export default function AboutPage() {
               <Parallax speed={-20} className="parallax-img-wrapper">
                 <Image
                   src="/images/the_salon_company/7.JPG"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  className='object-fit-cover'
                   alt="About Us Background"
                   priority
                 />
@@ -234,9 +234,9 @@ export default function AboutPage() {
               <div className="row gx-5 align-items-center">
                 <div className="col-lg-6">
                   <div className="subtitle wow fadeInUp mb-3">Our Story</div>
-                  <h2 className="wow fadeInUp" data-wow-delay=".2s">A Sanctuary of Exquisite Beauty</h2>
-                  <p>The Salon Company beckons with a promise of exquisite beauty, offering a sanctuary where natural radiance is amplified and refined. Here, the art of permanent makeup transforms features with subtle precision, while luxurious treatments revitalize the skin and spirit.</p>
-                  <p>Beyond the artistry, our skilled therapists curate bespoke facials, massages, and body treatments, each tailored to rejuvenate and restore. At The Salon Company, every touch is an invitation to embrace your most exquisite self, indulging in a moment of pure, luxurious renewal.</p>
+                  <h2 className="wow fadeInUp" data-wow-delay=".2s">The Art of Personal Grooming</h2>
+                  <p>The Salon Company was founded on a simple promise: to offer a sanctuary where classic grooming and modern style converge. We provide a complete range of services, from precision haircuts and traditional shaves to advanced facials and therapeutic hair treatments.</p>
+                  <p>Our skilled stylists and therapists are dedicated to the craft of making you look and feel your absolute best. Each service is tailored to your individual needs, using only the finest products. At The Salon Company, every visit is an invitation to invest in yourself, indulging in a moment of pure, confidence-boosting renewal.</p>
                 </div>
                 <div className="col-lg-6">
                   <div className="row g-4">
@@ -251,7 +251,7 @@ export default function AboutPage() {
                         <div className="bg-color-2 text-light p-4">
                           <div className="de_count wow fadeInUp">
                             <h2 className="mb-0">
-                              <CountUp end={500} duration={3} enableScrollSpy scrollSpyOnce />+
+                              <CountUp end={800} duration={3} enableScrollSpy scrollSpyOnce />+
                             </h2>
                             <span>Happy Clients</span>
                           </div>
@@ -264,9 +264,9 @@ export default function AboutPage() {
                         <div className="bg-color text-light p-4">
                           <div className="de_count wow fadeInUp">
                             <h2 className="mb-0">
-                              <CountUp end={20} duration={3} enableScrollSpy scrollSpyOnce />+
+                              <CountUp end={60} duration={4} enableScrollSpy scrollSpyOnce />+
                             </h2>
-                            <span>Luxury Services</span>
+                            <span>Services Offered</span>
                           </div>
                         </div>
                       </div>

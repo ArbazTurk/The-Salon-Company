@@ -143,7 +143,7 @@ export default function ContactPage() {
     message: ''
   });
   
-  const [formStatus, setFormStatus] = useState(''); // '', 'loading', 'success', 'error'
+  const [formStatus, setFormStatus] = useState('');
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
@@ -167,14 +167,12 @@ export default function ContactPage() {
   };
 
   return (
-    // 1. पूरे पेज को ParallaxProvider से रैप करें
     <ParallaxProvider>
       <div>
         <Header />
         <div className="no-bottom no-top" id="content">
           <div id="top"></div>
-          
-          {/* 2. Subheader section को Parallax के साथ अपडेट करें */}
+
           <section id="subheader" className="relative text-light overflow-hidden">
             <div className="parallax-bg-container">
               <Parallax speed={-20} className="parallax-img-wrapper">
@@ -191,9 +189,9 @@ export default function ContactPage() {
             <div className="container relative z-index-1000">
               <div className="row justify-content-center">
                 <div className="col-lg-6 text-center">
-                  <h1>Contact Us</h1>
+                  <h1>Get In Touch</h1>
                   <p className="lead mt-3">
-                    Have a question about our services or want to schedule a consultation? We&apos;re here to help you shine. Get in touch with our expert team.
+                    Whether you have a question about our haircuts, facials, or any other service, our team is ready to assist. Contact us to schedule your next appointment or consultation.
                   </p>
                   <ul className="crumb">
                     <li><Link href="/">Home</Link></li>

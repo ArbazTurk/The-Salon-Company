@@ -30,8 +30,8 @@ export default function Footer() {
               </div>
               <div>
                 <h3 className="fs-20">Contact Us</h3>
-                T. +91 88000 26046<br />
-                M. www.lokaci.com
+                <a href="tel:+918800026046"><i className="fa-solid fa-phone"></i> +91 88000 26046</a><br/>
+                <a href="mailto:www.lokaci.com"><i className="fa-solid fa-envelope"></i> www.lokaci.com</a>
               </div>
             </div>
           </div>
