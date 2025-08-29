@@ -1,10 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { useSearchParams } from "next/navigation";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { allServicesData } from "../services.js";
@@ -23,6 +24,19 @@ export default function ReservationPage() {
   });
 
   const [formStatus, setFormStatus] = useState("idle");
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const serviceParam = searchParams.get('service');
+    if (serviceParam) {
+      // Check if the service exists in allServicesData
+      const allServices = Object.values(allServicesData).flat();
+      const foundService = allServices.find(s => s.service === decodeURIComponent(serviceParam));
+      if (foundService) {
+        setFormData((prevState) => ({ ...prevState, service: foundService.service }));
+      }
+    }
+  }, [searchParams]);
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;

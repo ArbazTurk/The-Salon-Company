@@ -112,7 +112,7 @@ export default function ServicesPage() {
                         <h3 className="fs-40 lh-1 mb-4">
                           ₹{Math.round(service.final_price)}
                         </h3>
-                        <Link className="btn-line" href="/reservation">
+                        <Link className="btn-line" href={`/reservation?service=${encodeURIComponent(service.service)}`}>
                           Book Now
                         </Link>
                       </div>

@@ -43,7 +43,7 @@ export const allServicesData = {
     "HAIR TREATMENT": [
         { "service": "Regular Hair Spa (Men)", "price": 900, "discount": "0%", "final_price": 900.00 },
         { "service": "Keratin Treatment", "price": 4500, "discount": "21%", "final_price": 3555.00 },
-        { "service": "Botox Treatment", "price": 5000, "discount": "22%", "final_price": 3900.00 },
+        { "service": "Botox Hair Treatment", "price": 5000, "discount": "22%", "final_price": 3900.00 },
         { "service": "Anti-Dandruff Hair Spa (Men)", "price": 900, "discount": "0%", "final_price": 900.00 },
         { "service": "Gypsy Mavi Hair Spa (Men)", "price": 1400, "discount": "0%", "final_price": 1400.00 },
         { "service": "Gypsy Poof Hair Spa (Men)", "price": 1400, "discount": "0%", "final_price": 1400.00 },

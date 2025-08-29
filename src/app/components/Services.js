@@ -32,7 +32,7 @@ export default function Services() {
     {
       imgSrc: availableImages[1],
       price: 4000,
-      title: "Hydra Facial",
+      title: "Hydra Facial (Men)",
       tagline: "Deep Cleanse & Hydration",
       delay: ".4s",
     },
@@ -60,7 +60,7 @@ export default function Services() {
     {
       imgSrc: availableImages[5],
       price: 800,
-      title: "Inoa Hair Coloring",
+      title: "Inoa Hair Coloring (Men)",
       tagline: "Ammonia-Free Color",
       delay: ".8s",
     },
@@ -122,7 +122,7 @@ export default function Services() {
                           <h3 className="fs-40 lh-1 mb-4">
                             ₹{Math.round(service.price)}
                           </h3>
-                          <Link className="btn-line" href="/reservation">
+                          <Link className="btn-line" href={`/reservation?service=${encodeURIComponent(service.title)}`}>
                             Book Now
                           </Link>
                         </div>
