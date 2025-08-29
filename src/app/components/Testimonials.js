@@ -10,6 +10,7 @@ import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
+import Image from "next/image";
 
 const TestimonialSection = () => {
   useEffect(() => {
@@ -48,15 +49,17 @@ const TestimonialSection = () => {
       <section className="testimonial-section">
         <Parallax className="parallax-container" speed={-20}>
           <div className="parallax-bg-wrapper">
-            <img
-              src="/images/the_salon_company/testimonial background.jpg"
+            <Image
+              width={1920}
+              height={1080}
+              src="/images/the_salon_company/testimonial background.JPG"
               className="parallax-bg-image"
               alt="Testimonial Background"
             />
           </div>
         </Parallax>
 
-        <div className="abs abs-centered w-30 z-1">
+        <div className="abs abs-centered arch w-30 z-1">
           <div className="box-slider-decor"></div>
         </div>
 
@@ -75,7 +78,9 @@ const TestimonialSection = () => {
               <SwiperSlide key={index} className="testimonial-slide">
                 <i className="icofont-quote-left testimonial-quote-icon"></i>
                 <h3 className="testimonial-quote-text">{testimonial.quote}</h3>
-                <span className="testimonial-quote-author">{testimonial.author}</span>
+                <span className="testimonial-quote-author">
+                  {testimonial.author}
+                </span>
               </SwiperSlide>
             ))}
           </Swiper>

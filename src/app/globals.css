@@ -162,7 +162,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: visible;
+  overflow: visible !important;
 }
 
 .testimonial-slide {
@@ -219,7 +219,7 @@
   .testimonial-section {
     padding: 60px 0;
   }
-  .abs-centered {
+  .arch {
     width: 50% !important;
   }
   .custom-testimonial-swiper {
@@ -234,7 +234,7 @@
   .testimonial-section {
     padding: 40px 0;
   }
-  .abs-centered {
+  .arch {
     width: 70% !important;
   }
   .testimonial-quote-text {
@@ -245,5 +245,11 @@
   }
   .testimonial-quote-author {
     font-size: 16px !important;
+  }
+  .heading-small {
+    font-size: 50px !important;
+  }
+  .heading-2-small {
+    font-size: 30px !important;
   }
 }

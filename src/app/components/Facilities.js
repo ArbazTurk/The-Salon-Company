@@ -27,12 +27,17 @@ const FacilitiesSection = () => {
             </div>
             <div className="col-md-6">
               <div className="relative">
-                <img
+                <Image
+                  width={600}
+                  height={400}
                   src="/images/the_salon_company/4.JPG"
                   className="img-fluid wow fadeInUp"
                   alt="Happy Clients at The Salon Company"
                 />
-                <div className="bg-color text-light p-4 start-10 mx-4 mt-70 wow fadeInDown" style={{ position: 'sticky', zIndex: 1 }}>
+                <div
+                  className="bg-color text-light p-4 start-10 mx-4 mt-70 wow fadeInDown"
+                  style={{ position: "sticky", zIndex: 1 }}
+                >
                   <div className="row g-4 align-items-center">
                     <div className="col-lg-5 text-center">
                       <div
@@ -65,12 +70,17 @@ const FacilitiesSection = () => {
 
             <div className="col-md-6">
               <div className="relative">
-                <img
-                  src="/images/the_salon_company/facilities 1.jpg"
+                <Image
+                  width={600}
+                  height={400}
+                  src="/images/the_salon_company/facilities 1.JPG"
                   className="img-fluid wow fadeInUp"
                   alt="Wide Range of Salon Services"
                 />
-                <div className="bg-color text-light p-4 start-10 mx-4 mt-70 wow fadeInDown" style={{ position: 'sticky', zIndex: 1 }}>
+                <div
+                  className="bg-color text-light p-4 start-10 mx-4 mt-70 wow fadeInDown"
+                  style={{ position: "sticky", zIndex: 1 }}
+                >
                   <div className="row g-4 align-items-center">
                     <div className="col-lg-5 text-center">
                       <div

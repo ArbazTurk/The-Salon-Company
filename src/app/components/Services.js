@@ -1,13 +1,13 @@
-'use client';
-import React, { useRef } from 'react';
-import Link from 'next/link';
+"use client";
+import React, { useRef } from "react";
+import Link from "next/link";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
-import 'swiper/css';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/navigation";
 
-import { Navigation } from 'swiper/modules';
+import { Navigation } from "swiper/modules";
 
 export default function Services() {
   const swiperRef = useRef(null);
@@ -15,10 +15,10 @@ export default function Services() {
   const availableImages = [
     "/images/services/lokaci services microblading 533x533.jpg",
     "/images/services/lokaci services luxury facial 533x533.jpg",
-    "/images/services/lokaci services eyelash extensions 533x533.jpeg",
+    "/images/services/lokaci services bb glow 533x533.jpeg",
     "/images/services/lokaci services lip blusing 533x533.jpg",
     "/images/services/lokaci services bb glow 533x533.jpeg",
-    "/images/services/lokaci services eyeliner tattoo 533x533.jpg"
+    "/images/services/lokaci services eyeliner tattoo 533x533.jpg",
   ];
 
   const featuredServices = [
@@ -27,43 +27,43 @@ export default function Services() {
       price: 3555,
       title: "Keratin Treatment",
       tagline: "Smooth, Frizz-Free Hair",
-      delay: ".3s"
+      delay: ".3s",
     },
     {
       imgSrc: availableImages[1],
       price: 4000,
       title: "Hydra Facial",
       tagline: "Deep Cleanse & Hydration",
-      delay: ".4s"
+      delay: ".4s",
     },
     {
       imgSrc: availableImages[2],
       price: 1600,
       title: "Full Body Massage",
       tagline: "Relax & Rejuvenate",
-      delay: ".5s"
+      delay: ".5s",
     },
     {
       imgSrc: availableImages[3],
       price: 3900,
       title: "Botox Hair Treatment",
       tagline: "Repair & Strengthen",
-      delay: ".6s"
+      delay: ".6s",
     },
     {
       imgSrc: availableImages[4],
       price: 2240,
       title: "Full Body D-Tan",
       tagline: "For a Radiant Glow",
-      delay: ".7s"
+      delay: ".7s",
     },
     {
       imgSrc: availableImages[5],
       price: 800,
       title: "Inoa Hair Coloring",
       tagline: "Ammonia-Free Color",
-      delay: ".8s"
-    }
+      delay: ".8s",
+    },
   ];
 
   return (
@@ -71,7 +71,9 @@ export default function Services() {
       <div className="container-fluid relative z-2">
         <div className="row g-4">
           <div className="col-lg-8 offset-lg-2 text-center">
-            <div className="subtitle id-color wow fadeInUp mb-3">Our Offerings</div>
+            <div className="subtitle id-color wow fadeInUp mb-3">
+              Our Offerings
+            </div>
             <h2 className="wow fadeInUp">Featured Services</h2>
           </div>
 
@@ -86,8 +88,8 @@ export default function Services() {
                 spaceBetween={30}
                 slidesPerView={1}
                 navigation={{
-                  nextEl: '.btn-next',
-                  prevEl: '.btn-prev',
+                  nextEl: ".btn-next",
+                  prevEl: ".btn-prev",
                 }}
                 loop={true}
                 breakpoints={{
@@ -106,12 +108,23 @@ export default function Services() {
                 {featuredServices.map((service, index) => (
                   <SwiperSlide key={index}>
                     <div className="item">
-                      <div className="hover relative text-light text-center wow fadeInUp" data-wow-delay={service.delay}>
-                        <img src={service.imgSrc} className="w-100 rounded-up-100" alt={service.title} />
+                      <div
+                        className="hover relative text-light text-center wow fadeInUp"
+                        data-wow-delay={service.delay}
+                      >
+                        <img
+                          src={service.imgSrc}
+                          className="w-100 h-auto rounded-up-100"
+                          alt={service.title}
+                        />
                         <div className="abs hover-op-1 z-4 hover-mt-40 abs-centered">
                           <div className="fs-14">Starting From</div>
-                          <h3 className="fs-40 lh-1 mb-4">₹{Math.round(service.price)}</h3>
-                          <Link className="btn-line" href="/reservation">Book Now</Link>
+                          <h3 className="fs-40 lh-1 mb-4">
+                            ₹{Math.round(service.price)}
+                          </h3>
+                          <Link className="btn-line" href="/reservation">
+                            Book Now
+                          </Link>
                         </div>
                         <div className="abs bg-color z-2 top-0 w-100 h-100 hover-op-1 rounded-up-100"></div>
                         <div className="abs z-2 bottom-0 mb-3 w-100 text-center hover-op-0">

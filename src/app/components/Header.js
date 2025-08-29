@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState, useCallback, useRef } from "react";
@@ -21,16 +22,14 @@ export default function Header() {
     setActiveLink(pathname);
   }, [pathname]);
 
-  // Enhanced scroll behavior for desired navbar behavior
   const handleScroll = useCallback(() => {
     const currentScrollY = window.scrollY;
-    const backgroundChangeThreshold = 50; // When to add background
-    const hideNavbarThreshold = 200; // When to hide navbar when scrolling down (past hero)
+    const backgroundChangeThreshold = 50;
+    const hideNavbarThreshold = 200;
 
     setScrollY(currentScrollY);
     setLastScrollY(currentScrollY);
 
-    // Handle scroll-based background changes (transparent to solid background)
     if (currentScrollY >= backgroundChangeThreshold) {
       setIsScrolled(true);
       if (windowWidth >= 993 && !isSmaller) {
@@ -43,15 +42,12 @@ export default function Header() {
       }
     }
 
-    // Handle navbar hide/show behavior
-    // Hide navbar when scrolling down past hero section, show when scrolling up
     if (currentScrollY > lastScrollY && currentScrollY > hideNavbarThreshold) {
       setIsScrollingDown(true);
     } else {
       setIsScrollingDown(false);
     }
 
-    // Handle header clone for sticky behavior
     if (currentScrollY >= backgroundChangeThreshold && !hasClone) {
       setHasClone(true);
     } else if (currentScrollY < backgroundChangeThreshold && hasClone) {
@@ -59,13 +55,11 @@ export default function Header() {
     }
   }, [scrollY, lastScrollY, windowWidth, isSmaller, hasClone]);
 
-  // Add scroll listener on mount
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
 
-  // Handle resize and update window size
   useEffect(() => {
     const handleResize = () => {
       const newWidth = window.innerWidth;
@@ -74,26 +68,22 @@ export default function Header() {
       setWindowWidth(newWidth);
       setWindowHeight(newHeight);
 
-      // Close mobile menu on desktop
       if (newWidth > 993 && isMobileMenuOpen) {
         setIsMobileMenuOpen(false);
       }
 
-      // Handle header smaller class for desktop
       if (newWidth < 993) {
         setIsSmaller(false);
       }
     };
 
-    handleResize(); // initialize on mount
+    handleResize();
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, [isMobileMenuOpen]);
 
-  // Initialize header on mount
   useEffect(() => {
-    // Add menu arrows for mobile submenus
     const addMenuArrows = () => {
       const menuItems = document.querySelectorAll("#mainmenu li a");
       menuItems.forEach((item) => {
@@ -109,7 +99,6 @@ export default function Header() {
 
     addMenuArrows();
 
-    // Set initial header height
     if (headerRef.current) {
       const headerHeight = headerRef.current.scrollHeight;
       if (isMobileMenuOpen && windowWidth <= 993) {
@@ -121,12 +110,11 @@ export default function Header() {
   }, [isMobileMenuOpen, windowWidth, windowHeight]);
 
   const toggleMobileMenu = useCallback(() => {
-    setIsMobileMenuOpen(prev => !prev);
+    setIsMobileMenuOpen((prev) => !prev);
   }, []);
 
   const isMobile = windowWidth <= 993;
 
-  // Build header classes for desired behavior - visible from start
   const headerClasses = [
     "transparent",
     "has-topbar",
@@ -135,8 +123,10 @@ export default function Header() {
     isScrollingDown ? "nav-up" : "",
     isMobile ? "header-mobile" : "",
     isSmaller ? "smaller" : "",
-    hasClone ? "clone" : ""
-  ].filter(Boolean).join(" ");
+    hasClone ? "clone" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   const headerStyles =
     isMobileMenuOpen && isMobile ? { height: `${windowHeight}px` } : {};
@@ -147,21 +137,26 @@ export default function Header() {
         <div className="row">
           <div className="col-md-12">
             <div className="de-flex sm-pt10">
-              {/* Logo */}
               <div className="de-flex-col">
                 <div id="logo">
                   <Link href="/">
-                    <img
+                    <Image
+                      width={180}
+                      height={80}
                       className="logo-main"
                       src="/images/The_Salon_Company_Logo_White.png"
                       alt="Logo"
                     />
-                    <img
+                    <Image
+                      width={180}
+                      height={80}
                       className="logo-scroll"
                       src="/images/The_Salon_Company_Logo_White.png"
                       alt="Logo Scroll"
                     />
-                    <img
+                    <Image
+                      width={180}
+                      height={80}
                       className="logo-mobile"
                       src="/images/The_Salon_Company_Logo_White.png"
                       alt="Logo Mobile"
@@ -170,7 +165,6 @@ export default function Header() {
                 </div>
               </div>
 
-              {/* Navigation Menu */}
               <div className="de-flex-col header-col-mid">
                 <ul id="mainmenu">
                   <li>
@@ -213,20 +207,19 @@ export default function Header() {
                       Contact Us
                     </Link>
                   </li>
-                  {/* <li>
+                  <li className="d-lg-none">
                     <Link
                       className={`menu-item ${
-                        activeLink === "/blog" ? "active" : ""
+                        activeLink === "/reservation" ? "active" : ""
                       }`}
-                      href="/blog"
+                      href="/reservation"
                     >
-                      Blogs
+                      Reservation
                     </Link>
-                  </li> */}
+                  </li>
                 </ul>
               </div>
 
-              {/* Reservation Button */}
               <div className="de-flex-col">
                 <div className="menu_side_area">
                   <Link href="/reservation" className="btn-main btn-line">

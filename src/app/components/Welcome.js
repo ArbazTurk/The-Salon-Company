@@ -26,7 +26,8 @@ const Welcome = () => {
                     <Parallax speed={-15} className="parallax-container">
                       <Image
                         src="/images/welcome 1.jpg"
-                        fill
+                        width={400}
+                        height={500}
                         className="object-fit-cover"
                         alt="Salon Welcome Image 1"
                         priority
@@ -70,7 +71,8 @@ const Welcome = () => {
                     <Parallax speed={-15} className="parallax-container">
                       <Image
                         src="/images/welcome 2.jpg"
-                        fill
+                        width={400}
+                        height={500}
                         className="object-fit-cover"
                         alt="Salon Welcome Image 2"
                         priority
@@ -91,7 +93,9 @@ const Welcome = () => {
             >
               <div className="relative p-4 bg-white border-grey">
                 <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
-                  <img
+                  <Image
+                    width={40}
+                    height={40}
                     src="/images/icons/hair artistry.png"
                     className="w-100"
                     alt=""
@@ -100,7 +104,8 @@ const Welcome = () => {
                 <div className="pl-90">
                   <h4>Precision Haircuts</h4>
                   <p className="mb-0">
-                    From classic men&apos;s cuts to modern styles, our stylists deliver sharp, personalized results every time.
+                    From classic men&apos;s cuts to modern styles, our stylists
+                    deliver sharp, personalized results every time.
                   </p>
                 </div>
               </div>
@@ -112,7 +117,9 @@ const Welcome = () => {
             >
               <div className="relative p-4 bg-white border-grey">
                 <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
-                  <img
+                  <Image
+                    width={40}
+                    height={40}
                     src="/images/icons/beauty treatment.png"
                     className="w-100"
                     alt=""
@@ -121,7 +128,8 @@ const Welcome = () => {
                 <div className="pl-90">
                   <h4>Advanced Facials</h4>
                   <p className="mb-0">
-                    Revitalize your skin with Hydra Facials, O3+, and Casmara treatments.
+                    Revitalize your skin with Hydra Facials, O3+, and Casmara
+                    treatments.
                   </p>
                 </div>
               </div>
@@ -133,7 +141,9 @@ const Welcome = () => {
             >
               <div className="relative p-4 bg-white border-grey">
                 <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
-                  <img
+                  <Image
+                    width={40}
+                    height={40}
                     src="/images/icons/hair treatment icon.png"
                     className="w-100"
                     alt=""
@@ -142,7 +152,8 @@ const Welcome = () => {
                 <div className="pl-90">
                   <h4>Hair Treatments</h4>
                   <p className="mb-0">
-                    Restore strength and shine with our premium Keratin, Botox, and customized hair spa solutions.
+                    Restore strength and shine with our premium Keratin, Botox,
+                    and customized hair spa solutions.
                   </p>
                 </div>
               </div>
@@ -154,7 +165,9 @@ const Welcome = () => {
             >
               <div className="relative p-4 bg-white border-grey">
                 <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
-                  <img
+                  <Image
+                    width={40}
+                    height={40}
                     src="/images/svg/flower-lotus-thin-svgrepo-com.svg"
                     className="w-100"
                     alt=""
@@ -176,7 +189,9 @@ const Welcome = () => {
             >
               <div className="relative p-4 bg-white border-grey">
                 <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
-                  <img
+                  <Image
+                    width={40}
+                    height={40}
                     src="/images/icons/beard trimming icon.png"
                     className="w-100"
                     alt=""
@@ -185,7 +200,8 @@ const Welcome = () => {
                 <div className="pl-90">
                   <h4>Beard Grooming</h4>
                   <p className="mb-0">
-                    Perfect your look with expert beard trimming, shaving, and professional coloring services.
+                    Perfect your look with expert beard trimming, shaving, and
+                    professional coloring services.
                   </p>
                 </div>
               </div>
@@ -197,7 +213,9 @@ const Welcome = () => {
             >
               <div className="relative p-4 bg-white border-grey">
                 <span className="abs top-= w-70px p-3 rounded-up-100 bg-color d-block">
-                  <img
+                  <Image
+                    width={40}
+                    height={40}
                     src="/images/icons/premium products.png"
                     className="w-100"
                     alt="Premium Products Icon"
@@ -206,7 +224,8 @@ const Welcome = () => {
                 <div className="pl-90">
                   <h4>Premium Products</h4>
                   <p className="mb-0">
-                    We use only the finest, trusted and industry-leading brands to ensure exceptional results.
+                    We use only the finest, trusted and industry-leading brands
+                    to ensure exceptional results.
                   </p>
                 </div>
               </div>

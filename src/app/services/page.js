@@ -7,7 +7,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { allServicesData } from "../services.js";
 
-import 'animate.css';
+import "animate.css";
 
 export default function ServicesPage() {
   const [activeCategory, setActiveCategory] = useState(
@@ -15,14 +15,15 @@ export default function ServicesPage() {
   );
 
   useEffect(() => {
-    import('wowjs').then(WOW => {
+    import("wowjs").then((WOW) => {
       new WOW.default.WOW({
         live: false,
       }).init();
     });
   }, [activeCategory]);
 
-  const placeholderImage = "/images/services/lokaci services luxury facial 533x533.jpg";
+  const placeholderImage =
+    "/images/services/lokaci services luxury facial 533x533.jpg";
 
   return (
     <ParallaxProvider>
@@ -31,23 +32,26 @@ export default function ServicesPage() {
         <div className="no-bottom no-top" id="content">
           <div id="top"></div>
 
-          <section id="subheader" className="relative text-light overflow-hidden">
+          <section
+            id="subheader"
+            className="relative text-light overflow-hidden"
+          >
             <div className="parallax-bg-container">
               <Parallax speed={-20} className="parallax-img-wrapper">
                 <Image
                   src="/images/the_salon_company/7.JPG"
                   fill
-                  className='object-fit-cover'
+                  className="object-fit-cover"
                   alt="Our Services Background"
                   priority
                 />
               </Parallax>
             </div>
-            
+
             <div className="container relative z-index-1000">
               <div className="row justify-content-center">
                 <div className="col-lg-6 text-center">
-                  <h1>Our Full Menu</h1>
+                  <h1 className="heading-small">Our Full Menu</h1>
                   <p className="mt-3 lead">
                     Explore our extensive menu of services, each designed to
                     provide an unparalleled experience of luxury and care. Find
@@ -85,7 +89,7 @@ export default function ServicesPage() {
               </div>
 
               {/* Service Cards Grid */}
-              <div className="row g-4" key={activeCategory}> 
+              <div className="row g-4" key={activeCategory}>
                 {allServicesData[activeCategory].map((service, index) => (
                   <div className="col-lg-4 col-sm-6" key={index}>
                     <div
@@ -101,7 +105,9 @@ export default function ServicesPage() {
                       />
                       <div className="abs hover-op-1 z-4 hover-mt-40 abs-centered">
                         <div className="fs-14">
-                          {service.discount !== "0%" ? "Special Price" : "Price"}
+                          {service.discount !== "0%"
+                            ? "Special Price"
+                            : "Price"}
                         </div>
                         <h3 className="fs-40 lh-1 mb-4">
                           ₹{Math.round(service.final_price)}

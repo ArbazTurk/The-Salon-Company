@@ -43,7 +43,7 @@ const InstagramFeed = () => {
             <div className="subtitle id-color wow fadeInUp mb-3">
               Our Instagram
             </div>
-            <h2 className="wow fadeInUp">@the_salon_company</h2>
+            <h2 className="wow fadeInUp heading-2-small">@the_salon_company</h2>
           </div>
         </div>
       </div>
@@ -62,12 +62,12 @@ const InstagramFeed = () => {
                       className="d-block hover relative overflow-hidden text-light wow fadeInUp"
                       data-wow-delay={`${(colIndex * 4 + index) * 0.05}s`}
                     >
-                      {/* 1. BADLAV YAHAN HAI: Ek naya container div joda gaya hai */}
                       <div className="instagram-image-container">
                         <div className="image-fill">
                           <Image
                             src={src}
-                            fill
+                            width={200}
+                            height={200}
                             className="hover-scale-1-1 object-fit-cover"
                             alt={`Instagram post ${colIndex * 4 + index + 1}`}
                           />
