@@ -11,6 +11,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import Image from "next/image";
+import { BiSolidQuoteLeft } from "react-icons/bi";
 
 const TestimonialSection = () => {
   useEffect(() => {
@@ -76,7 +77,7 @@ const TestimonialSection = () => {
           >
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index} className="testimonial-slide">
-                <i className="icofont-quote-left testimonial-quote-icon"></i>
+                <BiSolidQuoteLeft className="id-color testimonial-quote-icon w-100" />
                 <h3 className="testimonial-quote-text">{testimonial.quote}</h3>
                 <span className="testimonial-quote-author">
                   {testimonial.author}

@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import 'animate.css';
+import { FaInstagram } from "react-icons/fa";
 
 const InstagramFeed = () => {
   useEffect(() => {
@@ -73,7 +74,7 @@ const InstagramFeed = () => {
                           />
                         </div>
                         <div className="abs abs-centered fs-24 text-white hover-op-0">
-                          <i className="fa-brands fa-instagram"></i>
+                          <FaInstagram />
                         </div>
                       </div>
                     </Link>

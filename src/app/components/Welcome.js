@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import "animate.css";
+import { FaStar } from "react-icons/fa";
 
 const Welcome = () => {
   useEffect(() => {
@@ -50,11 +51,11 @@ const Welcome = () => {
                   <h4 className="fw-bold mb-1">4.9 out of 5</h4>
                   <div className="de-rating-ext fs-18">
                     <span className="d-stars">
-                      <i className="icofont-star"></i>
-                      <i className="icofont-star"></i>
-                      <i className="icofont-star"></i>
-                      <i className="icofont-star"></i>
-                      <i className="icofont-star"></i>
+                      <FaStar className="star" />
+                      <FaStar className="star" />
+                      <FaStar className="star" />
+                      <FaStar className="star" />
+                      <FaStar className="star" />
                     </span>
                   </div>
                   <span className="d-block fs-14 mb-0">

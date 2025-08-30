@@ -1,3 +1,70 @@
+/* @font-face {
+  font-family: IcoFont;
+  font-weight: 400;
+  font-style: Regular;
+  src: url(../../public/fonts/icofont/fonts/icofont.woff2) format("woff2"),
+    url(../../public/fonts/icofont/fonts/icofont.woff) format("woff");
+}
+[class*=" icofont-"],
+[class^="icofont-"] {
+  font-family: IcoFont !important;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  line-height: 1;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+.icofont-star:before {
+  content: "\f000";
+}
+
+.icofont-quote-left:before {
+  content: "\efcd";
+}
+
+.fa-instagram:before {
+  content: "\f16d";
+} */
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  padding: 10px 5px;
+  font-size: 16px;
+  margin: 0 3px;
+  border-radius: 50% 50% 0 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  text-shadow: none;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.social-icon:hover {
+  color: #fff;
+  background: var(--primary-color, #c77b3b);
+  text-decoration: none;
+}
+
+.d-stars .star{
+  margin: 0 4px;
+  font-size: 14px;
+  color:#E4A853;
+}
+
+.btn-menu {
+  display: none;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
 .parallax-bg-container {
   position: absolute;
   top: 0;
@@ -78,27 +145,26 @@
 
 /* Optional: Datepicker ko aapke theme jaisa look dene ke liye kuch custom styles */
 .react-datepicker-wrapper .form-control {
-    background: none;
+  background: none;
 }
 .react-datepicker__header {
-    background-color: var(--primary-color) !important;
-    border-bottom: none !important;
+  background-color: var(--primary-color) !important;
+  border-bottom: none !important;
 }
 .react-datepicker__current-month,
 .react-datepicker__day-name {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
 .react-datepicker__day--selected,
 .react-datepicker__day--keyboard-selected {
-    background-color: var(--primary-color) !important;
+  background-color: var(--primary-color) !important;
 }
 
-/* Instagram Feed ke liye zaroori CSS */
 .instagram-image-container {
   position: relative;
   width: 100%;
   /* Yeh 1:1 aspect ratio banata hai (square) */
-  padding-top: 100%; 
+  padding-top: 100%;
 }
 
 .instagram-image-container .image-fill {
@@ -190,7 +256,7 @@
   display: block;
   margin-bottom: 20px;
   font-family: "Jost", Helvetica, Arial, sans-serif;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* --- Swiper Pagination Styling --- */
@@ -213,8 +279,13 @@
   background: #ab8965;
 }
 
-
 /* --- Media Queries for Responsiveness --- */
+@media (max-width: 992px) {
+  .btn-menu {
+  display: inline-block;
+}
+  
+}
 @media (max-width: 768px) {
   .testimonial-section {
     padding: 60px 0;

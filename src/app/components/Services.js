@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import { Navigation } from "swiper/modules";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 
 export default function Services() {
   const swiperRef = useRef(null);
@@ -79,9 +80,28 @@ export default function Services() {
 
           <div className="col-lg-12">
             <div className="owl-custom-nav menu-float px-5">
-              <a className="btn-prev" role="button" tabIndex="0"></a>
-              <a className="btn-next" role="button" tabIndex="0"></a>
-
+              <FaAngleLeft
+                className="btn-prev"
+                style={{
+                  padding: "10px 0",
+                  width: "40px",
+                  height: "40px",
+                  background: "var(--primary-color)",
+                  color: "#ffffff",
+                  borderRadius: "0 20px 20px 0",
+                }}
+              />
+              <FaAngleRight
+                className="btn-next"
+                style={{
+                  padding: "10px 0",
+                  width: "40px",
+                  height: "40px",
+                  background: "var(--primary-color)",
+                  color: "#ffffff",
+                  borderRadius: "20px 0 0 20px",
+                }}
+              />
               <Swiper
                 ref={swiperRef}
                 modules={[Navigation]}
@@ -122,7 +142,12 @@ export default function Services() {
                           <h3 className="fs-40 lh-1 mb-4">
                             ₹{Math.round(service.price)}
                           </h3>
-                          <Link className="btn-line" href={`/reservation?service=${encodeURIComponent(service.title)}`}>
+                          <Link
+                            className="btn-line"
+                            href={`/reservation?service=${encodeURIComponent(
+                              service.title
+                            )}`}
+                          >
                             Book Now
                           </Link>
                         </div>

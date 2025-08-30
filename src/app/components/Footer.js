@@ -1,6 +1,15 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import {
+  FaPhone,
+  FaEnvelope,
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaYoutube,
+  FaWhatsapp,
+} from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -27,32 +36,31 @@ export default function Footer() {
                 </Link>
                 <br />
                 <div className="social-icons mb-sm-30 mt-4">
-                  {/* Standard <a> tags are correct here as they are external links */}
                   <a href="#">
-                    <i className="fa-brands fa-facebook-f"></i>
+                    <FaFacebookF className="social-icon" />
                   </a>
                   <a href="#">
-                    <i className="fa-brands fa-instagram"></i>
+                    <FaInstagram className="social-icon" />
                   </a>
                   <a href="#">
-                    <i className="fa-brands fa-twitter"></i>
+                    <FaTwitter className="social-icon" />
                   </a>
                   <a href="#">
-                    <i className="fa-brands fa-youtube"></i>
+                    <FaYoutube className="social-icon" />
                   </a>
                   <a href="https://wa.me/918800026046">
-                    <i className="fa-brands fa-whatsapp"></i>
+                    <FaWhatsapp className="social-icon" />
                   </a>
                 </div>
               </div>
               <div>
                 <h3 className="fs-20">Contact Us</h3>
                 <a href="tel:+918800026046">
-                  <i className="fa-solid fa-phone"></i> +91 88000 26046
+                  <FaPhone className="mb-1" /> +91 88000 26046
                 </a>
                 <br />
                 <a href="mailto:www.lokaci.com">
-                  <i className="fa-solid fa-envelope"></i> www.lokaci.com
+                  <FaEnvelope className="mb-1 me-1" /> www.lokaci.com
                 </a>
               </div>
             </div>

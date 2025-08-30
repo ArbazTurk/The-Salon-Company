@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
+import { FaStar } from "react-icons/fa";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -23,7 +24,7 @@ export default function HeroSlider() {
           speed={1200}
           parallax={true}
           autoplay={{
-            delay: 3000,
+            delay: 300000,
             disableOnInteraction: false,
           }}
           pagination={{
@@ -47,11 +48,11 @@ export default function HeroSlider() {
                       <div className="sw-text-wrapper">
                         <div className="slider-extra mb-3">
                           <span className="d-stars">
-                            <i className="icofont-star"></i>
-                            <i className="icofont-star"></i>
-                            <i className="icofont-star"></i>
-                            <i className="icofont-star"></i>
-                            <i className="icofont-star"></i>
+                            <FaStar className='star'/>
+                            <FaStar className='star'/>
+                            <FaStar className='star'/>
+                            <FaStar className='star'/>
+                            <FaStar className='star'/>
                           </span>
                         </div>
                         <h1 className="slider-title mb-4">Where Artistry Meets Radiance</h1>
@@ -83,11 +84,11 @@ export default function HeroSlider() {
                       <div className="sw-text-wrapper">
                         <div className="slider-extra mb-3">
                           <span className="d-stars">
-                            <i className="icofont-star"></i>
-                            <i className="icofont-star"></i>
-                            <i className="icofont-star"></i>
-                            <i className="icofont-star"></i>
-                            <i className="icofont-star"></i>
+                            <FaStar />
+                            <FaStar />
+                            <FaStar />
+                            <FaStar />
+                            <FaStar />
                           </span>
                         </div>
                         <h1 className="slider-title mb-4">Wake Up to Effortless Perfection</h1>

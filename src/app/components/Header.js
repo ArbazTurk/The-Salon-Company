@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState, useCallback, useRef } from "react";
+import { FaBars, FaWindowMinimize } from "react-icons/fa";
 
 export default function Header() {
   const pathname = usePathname();
@@ -226,11 +227,15 @@ export default function Header() {
                     Reservation
                   </Link>
                   <span
-                    id="menu-btn"
-                    className={isMobileMenuOpen ? "menu-open" : ""}
+                    className="btn-menu"
                     onClick={toggleMobileMenu}
-                    style={{ cursor: "pointer" }}
-                  />
+                  >
+                    {isMobileMenuOpen ? (
+                      <FaWindowMinimize color="white" size={19} />
+                    ) : (
+                      <FaBars color="white" size={20} />
+                    )}
+                  </span>
                 </div>
               </div>
             </div>
